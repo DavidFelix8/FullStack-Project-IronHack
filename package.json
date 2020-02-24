@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
-    "connect-mongo": "^3.1.2",
+    "connect-mongo": "^3.2.0",
     "cookie-parser": "^1.4.4",
     "data-helper": "0.0.1",
     "debug": "^4.1.1",

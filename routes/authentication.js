@@ -1,33 +1,27 @@
 'use strict';
 
 const { Router } = require('express');
-
-const passport = require('passport');
-
 const router = new Router();
 
+const passport = require('passport');
+const bcryptjs = require('bcryptjs');
+const routeGuard = require('./../middleware/route-guard');
+const User = require('./../models/user');
+
 router.get('/sign-up', (req, res, next) => {
-  res.render('./authentication/sign-up');
+  res.render('authentication/sign-up');
 });
 
 router.post(
-  '/authentication/sign-up',
-  passport.authenticate('local-sign-up', {
-    successRedirect: '/private',
-    failureRedirect: '/sign-up'
-  })
-);
-
-router.post(
   '/sign-up',
-  passport.authenticate('github', {
-    successRedirect: '/private',
+  passport.authenticate('local-sign-up', {
+    successRedirect: '/',
     failureRedirect: '/sign-up'
   })
 );
 
 router.get('/sign-in', (req, res, next) => {
-  res.render('./authentication/sign-in');
+  res.render('sign-in');
 });
 
 router.post(
@@ -38,25 +32,11 @@ router.post(
   })
 );
 
-router.get(
-  '/github',
-  passport.authenticate('github', {
-    successRedirect: '/private',
-    failureRedirect: '/authentication/sign-in'
-  })
-);
-
-router.get(
-  '/github-callback',
-  passport.authenticate('github', {
-    successRedirect: '/private',
-    failureRedirect: '/authentication/sign-in'
-  })
-);
-
 router.post('/sign-out', (req, res, next) => {
   req.logout();
   res.redirect('/');
 });
+
+module.exports = router;
 
 module.exports = router;
