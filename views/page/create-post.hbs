@@ -1,0 +1,18 @@
+<h1>Create a New Post</h1>
+
+<form method="POST" enctype="multipart/form-data">
+  <label for="input-title">Post Title</label>
+  <input type="text" name="title" id="input-title" placeholder="Input Title" maxlength="80"/>
+
+  <label for="input-photo">Photo</label>
+  <input type="file" name="photo" id="input-photo" accept="image/*" />
+
+  <select name="category" id="category">
+    <option value="CSS">CSS</option>
+    <option value="HTML">HTML</option>
+    <option value="JavaScript">JavaScript</option>
+    <option value="General">General</option>
+  </select>
+  
+  <button>Create Post</button>
+</form>

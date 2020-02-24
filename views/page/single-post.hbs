@@ -1,0 +1,22 @@
+<article>
+  <h1>{{ post.title }}</h1>
+  <div>
+    <span>
+      Published in <a href="/page/{{ post.page._id }}">{{ post.page.name }}</a>, by <a href="/profile/{{ post.author._id }}">{{ post.author.name }}</a> on {{ date post.creationDate 'DD/MM/YYYY' }}
+    </span>
+  </div>
+  {{#each post.photo}}
+    <figure>
+      <img src="{{ this }}" />
+    </figure>
+  {{/each}}
+</article>
+
+<footer>
+  <h4>Comments</h4>
+  {{#each comments}}
+    {{>comment}}
+  {{/each}}
+  <h4>Add a Comment</h4>
+  {{>commentform}}
+</footer>

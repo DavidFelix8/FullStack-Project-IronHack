@@ -1,4 +1,4 @@
-/*'use strict';
+'use strict';
 
 const { Router } = require('express');
 const router = new Router();
@@ -10,13 +10,14 @@ const Comment = require('./../models/comment');
 const routeGuard = require('../middleware/route-guard');
 
 router.get('/create', routeGuard(true), (req, res, next) => {
+  //acertar o local da nossa view
   res.render('page/create');
 });
 
 router.post('/create', routeGuard(true), (req, res, next) => {
-  const { name } = req.body;
+  const { category } = req.body;
   Page.create({
-    name
+    category
   })
     .then(page => {
       res.redirect(`/page/${page._id}`);
@@ -27,7 +28,6 @@ router.post('/create', routeGuard(true), (req, res, next) => {
 });
 
 router.get('/:pageId', (req, res, next) => {
-  // const { channelId } = req.params;
   const pageId = req.params.pageId;
 
   let page;
@@ -38,12 +38,12 @@ router.get('/:pageId', (req, res, next) => {
         next(new Error('NOT_FOUND'));
       } else {
         page = document;
-        return Post.find({ page: pageId })
-          .populate('page author')
-          .limit(50);
+        return Post.find({ page: pageId }).populate('page author');
+        //.limit(50);
       }
     })
     .then(posts => {
+      // colocar o sitio da nossa view - single
       res.render('page/single', { page, posts });
     })
     .catch(error => {
@@ -109,47 +109,6 @@ router.get('/:pageId/post/:postId', (req, res, next) => {
     });
 });
 
-router.get('/:pageId/post/:postId/edit', (req, res, next) => {
-  const { postId } = req.params;
-
-  Post.findOne({
-    _id: postId,
-    author: req.user._id
-  })
-    .then(post => {
-      if (post) {
-        res.render('page/edit-post', { post });
-      } else {
-        next(new Error('NOT_FOUND'));
-      }
-    })
-    .catch(error => {
-      next(error);
-    });
-});
-
-router.post('/:pageId/post/:postId/edit', routeGuard(true), (req, res, next) => {
-  const { pageId, postId } = req.params;
-  const { title, content } = req.body;
-
-  Post.findOneAndUpdate(
-    {
-      _id: postId,
-      author: req.user._id
-    },
-    {
-      title,
-      content
-    }
-  )
-    .then(() => {
-      res.redirect(`/page/${pageId}/post/${postId}`);
-    })
-    .catch(error => {
-      next(error);
-    });
-});
-
 router.post('/:pageId/post/:postId/comment', routeGuard(true), (req, res, next) => {
   const { pageId, postId } = req.params;
   const { content } = req.body;
@@ -175,5 +134,3 @@ router.post('/:pageId/post/:postId/comment', routeGuard(true), (req, res, next) 
 });
 
 module.exports = router;
-
-*/

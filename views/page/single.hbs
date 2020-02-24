@@ -1,0 +1,12 @@
+<h1>{{ page.name }}</h1>
+
+<main>
+  <section>
+    {{#each posts}}
+      {{>post}}
+    {{/each}}
+  </section>
+  <aside>
+    <a href="/page/{{ page._id }}/post/create">Create Post</a>
+  </aside>
+</main>

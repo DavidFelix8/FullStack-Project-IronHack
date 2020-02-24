@@ -7,7 +7,8 @@ const schema = new mongoose.Schema(
     title: {
       type: String,
       trim: true,
-      maxlength: 50
+      maxlength: 50,
+      required: true
     },
     /*content: {
       type: String,
@@ -17,16 +18,15 @@ const schema = new mongoose.Schema(
     }, */
     page: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'Channel',
-      required: true
+      ref: 'Channel'
     },
     author: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'User',
-      required: true
+      ref: 'User'
     },
     photos: {
-      type: String
+      type: String,
+      required: true
     }
   },
   {
@@ -34,9 +34,9 @@ const schema = new mongoose.Schema(
       createdAt: 'creationDate',
       updatedAt: 'updateDate'
     },
-    //adicionar restantes
     category: {
-      enum: ['CSS', 'HTML', 'JavaScript']
+      enum: ['CSS', 'HTML', 'JavaScript', 'General'],
+      required: true
     }
   }
 );

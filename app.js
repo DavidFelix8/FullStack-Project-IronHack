@@ -17,6 +17,7 @@ const indexRouter = require('./routes/index');
 const authenticationRouter = require('./routes/authentication');
 
 const profileRouter = require('./routes/profile');
+const pageRouter = require('./routes/page');
 
 // const handlebarsHelperDate = require('helper-date');
 const hbs = require('hbs');
@@ -67,6 +68,7 @@ app.use(bindUserToViewLocals);
 app.use('/', indexRouter);
 app.use('/authentication', authenticationRouter);
 app.use('/profile', profileRouter);
+app.use('/page', pageRouter);
 
 // Catch missing routes and forward to error handler
 app.use((req, res, next) => {
@@ -83,4 +85,3 @@ app.use((error, req, res, next) => {
 });
 
 module.exports = app;
-//asda
