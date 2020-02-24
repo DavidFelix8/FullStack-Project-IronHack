@@ -24,21 +24,20 @@ const schema = new mongoose.Schema(
       type: mongoose.Schema.Types.ObjectId,
       ref: 'User'
     },
-    photos: {
+    photo: {
       type: String,
       required: true
+    },
+    category: {
+      enum: ['CSS', 'HTML', 'JavaScript', 'General']
     }
-  },
-  {
+  }
+  /* {
     timestamps: {
       createdAt: 'creationDate',
       updatedAt: 'updateDate'
-    },
-    category: {
-      enum: ['CSS', 'HTML', 'JavaScript', 'General'],
-      required: true
     }
-  }
+  } */
 );
 
 const Model = mongoose.model('Post', schema);

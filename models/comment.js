@@ -16,11 +16,11 @@ const schema = new mongoose.Schema({
     required: true,
     maxlength: 500,
     trim: true
-  },
-  timestamps: {
+  }
+  /*   timestamps: {
     createdAt: 'creationDate',
     updatedAt: 'updateDate'
-  }
+  } */
 });
 
 module.exports = mongoose.model('Comment', schema);
