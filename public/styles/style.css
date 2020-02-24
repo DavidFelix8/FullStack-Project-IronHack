@@ -3,6 +3,14 @@
   padding: 0;
   box-sizing: border-box; }
 
+a {
+  color: White;
+  text-decoration: none; }
+
+nav form {
+  display: flex;
+  justify-content: center; }
+
 .sign-in-auth {
   margin: 10rem; }
 
