@@ -16,6 +16,12 @@ const passportConfigure = require('./passport-configuration.js');
 const indexRouter = require('./routes/index');
 const authenticationRouter = require('./routes/authentication');
 
+// const handlebarsHelperDate = require('helper-date');
+const hbs = require('hbs');
+
+// hbs.registerHelper('date', handlebarsHelperDate);
+hbs.registerPartials(join(__dirname, 'views/partials'));
+
 const app = express();
 
 app.set('views', join(__dirname, 'views'));
@@ -26,8 +32,7 @@ app.use(
   sassMiddleware({
     src: join(__dirname, 'public'),
     dest: join(__dirname, 'public'),
-    outputStyle:
-      process.env.NODE_ENV === 'development' ? 'nested' : 'compressed',
+    outputStyle: process.env.NODE_ENV === 'development' ? 'nested' : 'compressed',
     force: process.env.NODE_ENV === 'development',
     sourceMap: true
   })
