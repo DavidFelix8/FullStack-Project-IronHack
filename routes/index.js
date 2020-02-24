@@ -18,7 +18,7 @@ router.get('/', (req, res, next) => {
         .limit(20);
     })
     .then(posts => {
-      res.render('home', { posts, popularPages: pages });
+      res.render('index', { posts, popularPages: pages });
     })
     .catch(error => {
       next(error);
