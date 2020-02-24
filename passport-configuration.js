@@ -60,6 +60,7 @@ passport.use(
       email
     })
       .then(document => {
+        console.log(req.body);
         user = document;
         return bcryptjs.compare(password, user.passwordHash);
       })

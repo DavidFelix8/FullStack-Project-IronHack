@@ -21,14 +21,14 @@ router.post(
 );
 
 router.get('/sign-in', (req, res, next) => {
-  res.render('sign-in');
+  res.render('authentication/sign-in');
 });
 
 router.post(
   '/sign-in',
   passport.authenticate('local-sign-in', {
-    successRedirect: '/private',
-    failureRedirect: '/sign-in'
+    successRedirect: '/',
+    failureRedirect: './sign-in'
   })
 );
 
