@@ -16,6 +16,8 @@ const passportConfigure = require('./passport-configuration.js');
 const indexRouter = require('./routes/index');
 const authenticationRouter = require('./routes/authentication');
 
+const profileRouter = require('./routes/profile');
+
 // const handlebarsHelperDate = require('helper-date');
 const hbs = require('hbs');
 
@@ -64,6 +66,7 @@ app.use(bindUserToViewLocals);
 
 app.use('/', indexRouter);
 app.use('/authentication', authenticationRouter);
+app.use('/profile', profileRouter);
 
 // Catch missing routes and forward to error handler
 app.use((req, res, next) => {

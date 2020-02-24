@@ -9,15 +9,16 @@ const Post = require('./../models/post');
 const routeGuard = require('./../middleware/route-guard');
 
 router.get('/edit', (req, res, next) => {
-  res.render('profile/edit');
+  res.render('edit-profile');
 });
 
-router.post('/edit', routeGuard(true), (req, res, next) => {
-  const userId = req.user._id;
-  const { name } = req.body;
+router.post('/edit/:id', routeGuard(true), (req, res, next) => {
+  const userId = req.params.id;
+  const { name, email } = req.body;
 
   User.findByIdAndUpdate(userId, {
-    name
+    name,
+    email
   })
     .then(() => {
       res.redirect('/');
