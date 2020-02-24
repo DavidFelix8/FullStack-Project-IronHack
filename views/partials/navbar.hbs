@@ -10,14 +10,13 @@
     </form>
   </div>
 {{#if user}}
+  <button href="">Upload</button>
   <a href="/profile/edit">{{ user.name }}'s Profile</a>
-  <form action="/authentication/sign-out" method="POST">
-    <button>Sign Out</button>
-  </form>
+  <a href="/authentication//sign-out"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
 {{else}}
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="/authentication/sign-up"><span class="glyphicon glyphicon-user text-white"></span>Sign Up</a></li>     
-      <li><a href="/authentication/sign-in"><span class="glyphicon glyphicon-log-in text-white"></span> Login</a></li>
+      <li><a href="/authentication/sign-up"><i class="fas fa-user-plus"></i>Sign Up</a></li>     
+      <li><a href="/authentication/sign-in"><i class="fas fa-sign-in-alt"></i>Login</a></li>
     </ul>
 {{/if}}
 </nav>
