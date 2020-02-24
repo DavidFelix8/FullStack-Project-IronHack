@@ -7,11 +7,22 @@ const Post = require('./../models/post');
 const Page = require('./../models/page');
 
 router.get('/', (req, res, next) => {
-  res.render('index', { title: 'Hello World!' });
-});
+  let pages;
 
-router.get('/private', routeGuard, (req, res, next) => {
-  res.render('private');
+  Page.find()
+    .limit(10)
+    .then(documents => {
+      pages = documents;
+      return Post.find()
+        .populate('page author')
+        .limit(20);
+    })
+    .then(posts => {
+      res.render('home', { posts, popularPages: pages });
+    })
+    .catch(error => {
+      next(error);
+    });
 });
 
 module.exports = router;
