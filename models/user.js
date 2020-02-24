@@ -23,13 +23,13 @@ const schema = new mongoose.Schema({
   passwordHash: {
     type: String,
     required: true
-  },
-  googleID: {
+  }
+  /*googleID: {
     type: String
   },
   googleUsername: {
     type: String
-  }
+  }*/
 });
 
 module.exports = mongoose.model('User', schema);
