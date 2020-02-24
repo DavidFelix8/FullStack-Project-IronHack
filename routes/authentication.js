@@ -20,7 +20,7 @@ router.post(
 
 router.post(
   '/sign-up',
-  passport.authenticate('github', {
+  passport.authenticate({
     successRedirect: '/private',
     failureRedirect: '/sign-up'
   })
@@ -38,7 +38,7 @@ router.post(
   })
 );
 
-router.get(
+/*router.get(
   '/github',
   passport.authenticate('github', {
     successRedirect: '/private',
@@ -52,7 +52,7 @@ router.get(
     successRedirect: '/private',
     failureRedirect: '/authentication/sign-in'
   })
-);
+);*/
 
 router.post('/sign-out', (req, res, next) => {
   req.logout();
