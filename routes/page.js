@@ -1,4 +1,4 @@
-'use strict';
+/*'use strict';
 
 const { Router } = require('express');
 const router = new Router();
@@ -175,3 +175,5 @@ router.post('/:pageId/post/:postId/comment', routeGuard(true), (req, res, next) 
 });
 
 module.exports = router;
+
+*/

@@ -29,6 +29,7 @@ passport.use(
       passReqToCallback: true
     },
     (req, email, password, callback) => {
+      console.log('req.body', req.body);
       const name = req.body.name;
       bcryptjs
         .hash(password, 10)
@@ -40,9 +41,11 @@ passport.use(
           });
         })
         .then(user => {
+          console.log('USER', user);
           callback(null, user);
         })
         .catch(error => {
+          console.log('ERROR', error);
           callback(error);
         });
     }
@@ -83,11 +86,7 @@ passport.use(
       scope: 'user:email'
     },
     (accessToken, refreshToken, profile, callback) => {
-      const {
-        displayName: name,
-        emails,
-        photos: [{ value: photo } = {}] = []
-      } = profile;
+      const { displayName: name, emails, photos: [{ value: photo } = {}] = [] } = profile;
       const primaryEmail = emails.find(email => email.primary).value;
       User.findOne({ email: primaryEmail })
         .then(user => {
