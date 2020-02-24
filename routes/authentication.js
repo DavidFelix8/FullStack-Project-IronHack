@@ -7,7 +7,7 @@ const passport = require('passport');
 const router = new Router();
 
 router.get('/sign-up', (req, res, next) => {
-  res.render('sign-up');
+  res.render('/authentication/sign-up');
 });
 
 router.post(
@@ -27,7 +27,7 @@ router.post(
 );
 
 router.get('/sign-in', (req, res, next) => {
-  res.render('sign-in');
+  res.render('/authentication/sign-in');
 });
 
 router.post(
