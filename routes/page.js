@@ -7,7 +7,7 @@ const Page = require('./../models/page');
 const Post = require('./../models/post');
 const Comment = require('./../models/comment');
 
-const routeGuard = require('./../middleware/route-guard');
+const routeGuard = require('../middleware/route-guard');
 
 router.get('/create', routeGuard(true), (req, res, next) => {
   res.render('page/create');
@@ -55,7 +55,7 @@ router.get('/:pageId/post/create', routeGuard(true), (req, res, next) => {
   res.render('page/create-post');
 });
 
-const uploader = require('./../multer-configure.js');
+const uploader = require('../multer-configure.js');
 
 router.post(
   '/:pageId/post/create',

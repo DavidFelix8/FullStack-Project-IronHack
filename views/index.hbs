@@ -1,2 +1,19 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<h1>Home View</h1>
+
+<main>
+  <section>
+    {{#each posts}}
+      {{>post}}
+    {{/each}}
+  </section>
+  <aside>
+    <h4>Popular Channels</h4>
+    <ul class="page-list">
+      {{#each popularPage}}
+        <li class="page-item"><a href="/page/{{ _id }}">{{ name }}</a></li>
+      {{/each}}
+    </ul>
+    <p>Didn't find the channel you were looking for?</p>
+    <a href="/page/create" class="btn">Create Channel</a>
+  </aside>
+</main>

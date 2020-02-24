@@ -7,11 +7,11 @@ const passport = require('passport');
 const router = new Router();
 
 router.get('/sign-up', (req, res, next) => {
-  res.render('/authentication/sign-up');
+  res.render('./authentication/sign-up');
 });
 
 router.post(
-  '/sign-up',
+  '/authentication/sign-up',
   passport.authenticate('local-sign-up', {
     successRedirect: '/private',
     failureRedirect: '/sign-up'
@@ -27,7 +27,7 @@ router.post(
 );
 
 router.get('/sign-in', (req, res, next) => {
-  res.render('/authentication/sign-in');
+  res.render('./authentication/sign-in');
 });
 
 router.post(
