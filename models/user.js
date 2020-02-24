@@ -5,18 +5,29 @@ const mongoose = require('mongoose');
 const schema = new mongoose.Schema({
   name: {
     type: String,
-    trim: true
+    trim: true,
+    unique: true,
+    minlength: 3,
+    maxlength: 20
   },
   email: {
     type: String,
     required: true,
     lowercase: true,
-    trim: true
+    trim: true,
+    unique: true
   },
-  passwordHash: {
+  photo: {
     type: String
   },
-  githubToken: {
+  passwordHash: {
+    type: String,
+    required: true
+  },
+  googleID: {
+    type: String
+  },
+  googleUsername: {
     type: String
   }
 });
