@@ -1,9 +1,5 @@
-<a href ="/page/ {{ page._id }}/post/{{ _id }}" class="post">
-  <article>
-    <div>
-      <h5>{{ content }}</h5>
-      <small>{{page.name}} | {{author.name}}</small>
-    </div>
-    <figure>{{post.photos}}</figure>
-  </article>
-</a>
+<div class="single-post">
+  <h1>{{title}}</h1>
+  <img src="{{photo}}" alt="">
+  <h3>{{author.name}}</h3>
+</div>

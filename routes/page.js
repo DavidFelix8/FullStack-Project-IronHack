@@ -15,7 +15,9 @@ router.get('/create', routeGuard(true), (req, res, next) => {
 });
 
 router.post('/create', routeGuard(true), (req, res, next) => {
+  console.log(req.body);
   const { category } = req.body;
+  console.log(category);
   Page.create({
     category
   })
@@ -60,10 +62,11 @@ const uploader = require('../multer-configure.js');
 router.post(
   '/:pageId/post/create',
   routeGuard(true),
-  uploader.array('photos', 1),
+  uploader.array('photo', 1),
   (req, res, next) => {
-    const { title, content } = req.body;
+    const { title } = req.body;
     const { pageId } = req.params;
+    const { category } = req.params;
 
     const urls = req.files.map(file => {
       return file.url;
@@ -73,10 +76,10 @@ router.post(
 
     Post.create({
       title,
-      content,
       page: pageId,
       author,
-      photos: urls
+      category,
+      photo: urls
     })
       .then(post => {
         res.redirect(`/page/${post.page}/post/${post._id}`);
@@ -87,7 +90,7 @@ router.post(
   }
 );
 
-router.get('/:pageId/post/:postId', (req, res, next) => {
+router.get('/post/:postId', (req, res, next) => {
   const { postId } = req.params;
 
   let post;

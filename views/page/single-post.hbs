@@ -1,22 +1,6 @@
 <article>
-  <h1>{{ post.title }}</h1>
-  <div>
-    <span>
-      Published in <a href="/page/{{ post.page._id }}">{{ post.page.name }}</a>, by <a href="/profile/{{ post.author._id }}">{{ post.author.name }}</a>
-    </span>
-  </div>
-  {{#each post.photo}}
-    <figure>
-      <img src="{{ this }}" />
-    </figure>
-  {{/each}}
-</article>
-
-<footer>
-  <h4>Comments</h4>
-  {{#each comments}}
-    {{>comment}}
-  {{/each}}
-  <h4>Add a Comment</h4>
-  {{>commentform}}
-</footer>
+  <h1>{{ postInfo.title }}</h1>
+  <img src="{{postInfo.photo}}" alt="">
+  <h3>{{postInfo.author.name}}</h3>
+  <h5>{{postInfo.category}}</h5>
+  </article>
