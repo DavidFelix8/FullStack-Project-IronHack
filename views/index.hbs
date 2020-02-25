@@ -1,6 +1,12 @@
 <h1>Home View</h1>
 
-<main>
+{{#each posts}}
+
+{{>post}}
+
+{{/each}}
+
+{{!-- <main>
   <section>
     {{#each posts}}
       {{>post}}
@@ -16,4 +22,4 @@
     <p>Didn't find the channel you were looking for? Call David Féliz! 968189131</p>
     <a href="/page/create" class="btn">Create Channel</a>
   </aside>
-</main>
+</main> --}}

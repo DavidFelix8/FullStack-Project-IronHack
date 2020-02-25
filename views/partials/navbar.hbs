@@ -10,7 +10,8 @@
     </form>
   </div>
 {{#if user}}
-  <button href="">Upload</button>
+
+  <a href="/post/create">Upload</a>
   <a href="/profile/edit">{{ user.name }}'s Profile</a>
   <form action="/authentication/sign-out" method="POST">
     <button><i class="fas fa-sign-out-alt"></i>Sign Out</button>
