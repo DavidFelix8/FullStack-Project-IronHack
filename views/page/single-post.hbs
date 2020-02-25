@@ -4,3 +4,16 @@
   <h3>{{postInfo.author.name}}</h3>
   <h5>{{postInfo.category}}</h5>
 </article>
+
+<footer>
+  {{#if user}}
+  <h4>Add a comment</h4>
+  {{>commentform}}
+  <br>
+  {{else}}
+  <h4>Comments</h4>
+  {{#each comments}}
+    {{>comment}}
+  {{/each}}
+  {{/if}}
+</footer>
