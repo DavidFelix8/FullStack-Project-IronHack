@@ -7,20 +7,22 @@ const Post = require('./../models/post');
 const routeGuard = require('../middleware/route-guard');
 
 // cRud - Get all the posts. http://localhost:3000/post
-router.get('/', (req, res, next) => {
-  Post.find()
-    // .limit(10)
-    .then(posts => {
-      console.log('POSTS', posts);
-      res.render('index', { posts });
-    })
-    .catch(error => {
-      next(error);
-    });
-});
+
+//TODO: TALK ABOUT THIS WITH THE GROUP-THIS IS ALREADY BEEN DONE IN THE INDEX ROUTER
+// router.get('/', (req, res, next) => {
+//   Post.find()
+//     // .limit(10)
+//     .then(posts => {
+//       console.log('POSTS', posts);
+//       res.render('index', { posts });
+//     })
+//     .catch(error => {
+//       next(error);
+//     });
+// });
 
 // Crud - Get all the posts. http://localhost:3000/post/create
-router.get('/create', (req, res, next) => {
+router.get('/create', routeGuard(true), (req, res, next) => {
   res.render('page/create-post');
 });
 

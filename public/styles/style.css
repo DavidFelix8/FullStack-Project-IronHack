@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box; }
 
-a {
+nav a {
   color: White;
   text-decoration: none; }
 
@@ -11,6 +11,9 @@ a {
   margin: 10rem; }
 
 .sign-up-auth {
+  margin: 10rem; }
+
+.edit-profile {
   margin: 10rem; }
 
 /*# sourceMappingURL=style.css.map */

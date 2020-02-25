@@ -8,7 +8,7 @@ const Post = require('./../models/post');
 
 const routeGuard = require('./../middleware/route-guard');
 
-router.get('/edit', (req, res, next) => {
+router.get('/edit', routeGuard(true), (req, res, next) => {
   res.render('edit-profile');
 });
 
@@ -36,14 +36,14 @@ router.get('/:userId', (req, res, next) => {
     .then(document => {
       user = document;
       if (document) {
-        return Post.find({ author: userId }).populate('channel author');
+        return Post.find({ author: userId }).populate('author');
       } else {
         next(new Error('USER_NOT_FOUND'));
       }
     })
     .then(posts => {
       const isOwnProfile = req.user && req.user._id.toString() === user._id.toString();
-      res.render('profile/single', { profile: user, posts, isOwnProfile });
+      res.render('profile', { profile: user, posts, isOwnProfile });
     })
     .catch(error => {
       next(error);

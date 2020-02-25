@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-a {
+nav a {
   color: White;
   text-decoration: none;
 }
@@ -15,5 +15,9 @@ a {
 }
 //Authentication/Sign-Up
 .sign-up-auth {
+  margin: 10rem;
+}
+//Profile/Edit
+.edit-profile {
   margin: 10rem;
 }
