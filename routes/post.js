@@ -63,8 +63,8 @@ router.get('/:postId', (req, res, next) => {
 });
 
 /*Working on it Post to comments*/
-/* //Comments 
-router.post('/:pageId/post/:postId/comment', routeGuard(true), (req, res, next) => {
+//Comments
+/* router.post('/:pageId/post/:postId/comment', routeGuard(true), (req, res, next) => {
   const { pageId, postId } = req.params;
   const { content } = req.body;
   Post.findById(postId)
@@ -86,6 +86,5 @@ router.post('/:pageId/post/:postId/comment', routeGuard(true), (req, res, next) 
       next(error);
     });
 });
-
-module.exports = router;
  */
+module.exports = router;
