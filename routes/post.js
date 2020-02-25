@@ -47,24 +47,29 @@ router.post('/create', routeGuard(true), uploader.single('photo'), (req, res, ne
       res.redirect(`/post/${post._id}`);
     })
     .catch(error => {
-      console.log(error);
+      // console.log(error);
       next(error);
     });
 });
 
 router.get('/:postId', (req, res, next) => {
+  const user = req.user._id;
   const postId = req.params.postId;
   let postInfo;
+  let ownProfile;
+
   Post.findById(postId)
     .populate('author')
     .then(postData => {
       postInfo = postData;
-      console.log(postInfo);
+      //console.log(postInfo);
       return Comment.find({ post: postId }).populate('author');
     })
     .then(comments => {
-      console.log(comments);
-      res.render('page/single-post', { postInfo, comments });
+      user.toString() == postInfo.author._id.toString()
+        ? (ownProfile = true)
+        : (ownProfile = false);
+      res.render('page/single-post', { postInfo, comments, ownProfile });
     })
     .catch(error => next(error));
 });
