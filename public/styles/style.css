@@ -7,10 +7,6 @@ a {
   color: White;
   text-decoration: none; }
 
-nav form {
-  display: flex;
-  justify-content: center; }
-
 .sign-in-auth {
   margin: 10rem; }
 
