@@ -62,4 +62,30 @@ router.get('/:postId', (req, res, next) => {
     .catch(error => next(error));
 });
 
+/*Working on it Post to comments*/
+/* //Comments 
+router.post('/:pageId/post/:postId/comment', routeGuard(true), (req, res, next) => {
+  const { pageId, postId } = req.params;
+  const { content } = req.body;
+  Post.findById(postId)
+    .then(post => {
+      if (!post) {
+        return Promise.reject(new Error('NOT_FOUND'));
+      } else {
+        return Comment.create({
+          post: postId,
+          author: req.user._id,
+          content
+        });
+      }
+    })
+    .then(() => {
+      res.redirect(`/page/${pageId}/post/${postId}`);
+    })
+    .catch(error => {
+      next(error);
+    });
+});
+
 module.exports = router;
+ */
