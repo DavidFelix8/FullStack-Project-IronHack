@@ -8,7 +8,7 @@ const Post = require('./../models/post');
 
 const routeGuard = require('./../middleware/route-guard');
 
-router.get('/edit', (req, res, next) => {
+router.get('/edit', routeGuard(true), (req, res, next) => {
   res.render('edit-profile');
 });
 

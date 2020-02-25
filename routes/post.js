@@ -20,7 +20,7 @@ router.get('/', (req, res, next) => {
 });
 
 // Crud - Get all the posts. http://localhost:3000/post/create
-router.get('/create', (req, res, next) => {
+router.get('/create', routeGuard(true), (req, res, next) => {
   res.render('page/create-post');
 });
 
