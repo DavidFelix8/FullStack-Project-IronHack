@@ -43,7 +43,7 @@ router.get('/:userId', (req, res, next) => {
     })
     .then(posts => {
       const isOwnProfile = req.user && req.user._id.toString() === user._id.toString();
-      res.render('profile', { profile: user, posts, isOwnProfile });
+      res.render('author', { author: user, posts, isOwnProfile });
     })
     .catch(error => {
       next(error);
