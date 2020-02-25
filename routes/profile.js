@@ -30,6 +30,7 @@ router.post('/edit/:id', routeGuard(true), (req, res, next) => {
 
 router.get('/:userId', (req, res, next) => {
   const { userId } = req.params;
+  const loggedInUser = req.user._id;
   let user;
 
   User.findById(userId)

@@ -3,7 +3,7 @@ const { Router } = require('express');
 const router = new Router();
 
 const Post = require('./../models/post');
-// const Comment = require('./../models/comment');
+const Comment = require('./../models/comment');
 const routeGuard = require('../middleware/route-guard');
 
 // cRud - Get all the posts. http://localhost:3000/post
@@ -28,6 +28,7 @@ router.get('/create', routeGuard(true), (req, res, next) => {
 
 // Crud - Get all the posts. http://localhost:3000/post/create
 const uploader = require('../multer-configure.js');
+
 router.post('/create', routeGuard(true), uploader.single('photo'), (req, res, next) => {
   const { title, category } = req.body;
 
@@ -53,38 +54,36 @@ router.post('/create', routeGuard(true), uploader.single('photo'), (req, res, ne
 
 router.get('/:postId', (req, res, next) => {
   const postId = req.params.postId;
+  let postInfo;
   Post.findById(postId)
     .populate('author')
-    .then(postInfo => {
+    .then(postData => {
+      postInfo = postData;
       console.log(postInfo);
-      res.render('page/single-post', { postInfo });
+      return Comment.find({ post: postId }).populate('author');
+    })
+    .then(comments => {
+      console.log(comments);
+      res.render('page/single-post', { postInfo, comments });
     })
     .catch(error => next(error));
 });
 
-/*Working on it Post to comments*/
-Comments;
-router.post('/:pageId/post/:postId/comment', routeGuard(true), (req, res, next) => {
-  const { pageId, postId } = req.params;
+//Comments
+router.post('/:postId/comment', routeGuard(true), (req, res, next) => {
+  const { postId } = req.params;
+  const userId = req.user._id;
   const { content } = req.body;
-  Post.findById(postId)
-    .then(post => {
-      if (!post) {
-        return Promise.reject(new Error('NOT_FOUND'));
-      } else {
-        return Comment.create({
-          post: postId,
-          author: req.user._id,
-          content
-        });
-      }
+  Comment.create({
+    post: postId,
+    author: userId,
+    content: content
+  })
+    .then(newComment => {
+      console.log(newComment);
+      res.redirect(`/post/${postId}`);
     })
-    .then(() => {
-      res.redirect(`/page/${pageId}/post/${postId}`);
-    })
-    .catch(error => {
-      next(error);
-    });
+    .catch(error => next(error));
 });
 
 module.exports = router;

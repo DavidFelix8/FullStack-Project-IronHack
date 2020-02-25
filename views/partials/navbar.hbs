@@ -12,7 +12,7 @@
 {{#if user}}
 
   <a href="/post/create">Upload</a>
-  <a href="/profile/edit">{{ user.name }}'s Profile</a>
+  <a href="/profile/{{user._id}}">{{ user.name }}'s Profile</a>
   <form action="/authentication/sign-out" method="POST">
     <button><i class="fas fa-sign-out-alt"></i>Sign Out</button>
   </form>

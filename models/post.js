@@ -10,7 +10,6 @@ const schema = new mongoose.Schema(
       maxlength: 50,
       required: true
     },
-
     author: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'User'

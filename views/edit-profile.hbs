@@ -10,14 +10,15 @@
         </div>       
         <button type="submit" class="btn btn-primary">Save Changes</button>
     </form>
+     
 </div>
 
+<h2>MY POSTS:</h2>
 
-<!--Add Our Own Posts-->
-{{!-- <div class="my-posts-profile">
-{{#each posts.user._id}}
-  <h1>{{title}}</h1>
-  <img src="{{photo}}" alt="">
-  <h3>{{author.name}}</h3>
-{{/each}}
-</div> --}}
+<div>
+  {{#each posts}}
+
+  {{>post}}
+
+  {{/each}}
+</div>

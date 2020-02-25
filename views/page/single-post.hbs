@@ -3,17 +3,19 @@
   <img src="{{postInfo.photo}}" alt="">
   <h3>{{postInfo.author.name}}</h3>
   <h5>{{postInfo.category}}</h5>
+  {{#if isOwnProfile}}
+    <button>Delete</button>
+  {{/if}}
 </article>
 
 <footer>
-  {{#if user}}
-  <h4>Add a comment</h4>
-  {{>commentform}}
-  <br>
-  {{else}}
   <h4>Comments</h4>
   {{#each comments}}
     {{>comment}}
   {{/each}}
+  {{#if user}}
+  <h4>Add a comment</h4>
+  {{>commentform}}
+  <br>
   {{/if}}
 </footer>
