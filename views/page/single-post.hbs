@@ -3,6 +3,9 @@
   <img src="{{postInfo.photo}}" alt="">
   <h3>{{postInfo.author.name}}</h3>
   <h5>{{postInfo.category}}</h5>
+  {{#if isOwnProfile}}
+    <button>Delete</button>
+  {{/if}}
 </article>
 
 <footer>

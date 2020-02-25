@@ -1,4 +1,21 @@
 <h2>{{author.name}}'s Posts:</h1>
+{{#if isOwnProfile}}
+<div class="edit-profile">
+    <form action="/profile/edit/{{user._id}}" method="POST">
+         <div class="form-group">
+            <label for="inputUser">Name</label>
+            <input name="name" type="text" value={{user.name}} class="form-control" id="inputUser" placeholder="Enter Your Name" required>
+        </div>
+        <div class="form-group">
+            <label for="inputEmail">Email</label>
+            <input name="email" type="email" value={{user.email}} class="form-control" id="inputEmail" placeholder="Enter Your Email" required>
+        </div>       
+        <button type="submit" class="btn btn-primary">Save Changes</button>
+    </form>
+     
+</div>
+
+{{/if}}
 
 <div>
   {{#each posts}}

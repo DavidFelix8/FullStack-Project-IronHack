@@ -28,6 +28,7 @@ router.get('/create', routeGuard(true), (req, res, next) => {
 
 // Crud - Get all the posts. http://localhost:3000/post/create
 const uploader = require('../multer-configure.js');
+
 router.post('/create', routeGuard(true), uploader.single('photo'), (req, res, next) => {
   const { title, category } = req.body;
 
@@ -68,16 +69,10 @@ router.get('/:postId', (req, res, next) => {
     .catch(error => next(error));
 });
 
-/*Working on it Post to comments*/
 //Comments
-<<<<<<< HEAD
 router.post('/:postId/comment', routeGuard(true), (req, res, next) => {
   const { postId } = req.params;
   const userId = req.user._id;
-=======
-/* router.post('/:pageId/post/:postId/comment', routeGuard(true), (req, res, next) => {
-  const { pageId, postId } = req.params;
->>>>>>> a61411ed43a02c0d1ac898638466bf075f1af80b
   const { content } = req.body;
   Comment.create({
     post: postId,
@@ -90,9 +85,5 @@ router.post('/:postId/comment', routeGuard(true), (req, res, next) => {
     })
     .catch(error => next(error));
 });
-<<<<<<< HEAD
 
-=======
- */
->>>>>>> a61411ed43a02c0d1ac898638466bf075f1af80b
 module.exports = router;

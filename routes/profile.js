@@ -44,11 +44,7 @@ router.get('/:userId', (req, res, next) => {
     })
     .then(posts => {
       const isOwnProfile = req.user && req.user._id.toString() === user._id.toString();
-      if (loggedInUser.toString() === userId.toString()) {
-        res.redirect('/profile/edit');
-      } else {
-        res.render('author', { author: user, posts, isOwnProfile });
-      }
+      res.render('author', { author: user, posts, isOwnProfile });
     })
     .catch(error => {
       next(error);
