@@ -1,4 +1,4 @@
-<div class="sign-up-auth">
+<div class="edit-profile">
     <form action="/profile/edit/{{user._id}}" method="POST">
          <div class="form-group">
             <label for="inputUser">Name</label>
@@ -10,4 +10,12 @@
         </div>       
         <button type="submit" class="btn btn-primary">Save Changes</button>
     </form>
+</div>
+
+<div class="my-posts-profile">
+{{#each posts.user._id}}
+  <h1>{{title}}</h1>
+  <img src="{{photo}}" alt="">
+  <h3>{{author.name}}</h3>
+{{/each}}
 </div>
