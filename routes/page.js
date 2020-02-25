@@ -15,7 +15,9 @@ router.get('/create', routeGuard(true), (req, res, next) => {
 });
 
 router.post('/create', routeGuard(true), (req, res, next) => {
+  console.log(req.body);
   const { category } = req.body;
+  console.log(category);
   Page.create({
     category
   })
@@ -51,41 +53,36 @@ router.get('/:pageId', (req, res, next) => {
     });
 });
 
-router.get('/:pageId/post/create', routeGuard(true), (req, res, next) => {
+router.get('/post/create', routeGuard(true), (req, res, next) => {
   res.render('page/create-post');
 });
 
 const uploader = require('../multer-configure.js');
 
-router.post(
-  '/:pageId/post/create',
-  routeGuard(true),
-  uploader.array('photos', 1),
-  (req, res, next) => {
-    const { title, content } = req.body;
-    const { pageId } = req.params;
+router.post('/post/create', routeGuard(true), uploader.array('photos', 1), (req, res, next) => {
+  const { title, content } = req.body;
+  const { pageId } = req.params;
 
-    const urls = req.files.map(file => {
-      return file.url;
-    });
+  const urls = req.files.map(file => {
+    return file.url;
+  });
 
-    const author = req.user._id;
+  const author = req.user._id;
 
-    Post.create({
-      title,
-      content,
-      page: pageId,
-      author,
-      photos: urls
+  Post.create({
+    title,
+    content,
+    page: pageId,
+    author,
+    photos: urls
+  })
+    .then(post => {
+      res.redirect(`/page/${post.page}/post/${post._id}`);
     })
-      .then(post => {
-        res.redirect(`/page/${post.page}/post/${post._id}`);
-      })
-      .catch(error => {
-        next(error);
-      });
-  }
-);
+    .catch(error => {
+      next(error);
+    });
+});
 
 router.get('/:pageId/post/:postId', (req, res, next) => {
   const { postId } = req.params;
