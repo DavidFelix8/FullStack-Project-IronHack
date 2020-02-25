@@ -6,14 +6,13 @@
 </article>
 
 <footer>
-  {{#if user}}
-  <h4>Add a comment</h4>
-  {{>commentform}}
-  <br>
-  {{else}}
   <h4>Comments</h4>
   {{#each comments}}
     {{>comment}}
   {{/each}}
+  {{#if user}}
+  <h4>Add a comment</h4>
+  {{>commentform}}
+  <br>
   {{/if}}
 </footer>

@@ -4,7 +4,9 @@ const mongoose = require('mongoose');
 
 const schema = new mongoose.Schema({
   post: {
-    type: mongoose.Schema.Types.ObjectId
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Post',
+    required: true
   },
   author: {
     type: mongoose.Schema.Types.ObjectId,

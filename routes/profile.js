@@ -30,6 +30,7 @@ router.post('/edit/:id', routeGuard(true), (req, res, next) => {
 
 router.get('/:userId', (req, res, next) => {
   const { userId } = req.params;
+  const loggedInUser = req.user._id;
   let user;
 
   User.findById(userId)
@@ -43,7 +44,11 @@ router.get('/:userId', (req, res, next) => {
     })
     .then(posts => {
       const isOwnProfile = req.user && req.user._id.toString() === user._id.toString();
-      res.render('author', { author: user, posts, isOwnProfile });
+      if (loggedInUser.toString() === userId.toString()) {
+        res.redirect('/profile/edit');
+      } else {
+        res.render('author', { author: user, posts, isOwnProfile });
+      }
     })
     .catch(error => {
       next(error);

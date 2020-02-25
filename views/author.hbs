@@ -1,4 +1,9 @@
-<p>Testing author</p>
+<h2>{{author.name}}'s Posts:</h1>
 
-<h1>{{author.name}}</h1>
-<img src="{{photo}}" alt="">
+<div>
+  {{#each posts}}
+
+  {{>post}}
+
+  {{/each}}
+</div>
