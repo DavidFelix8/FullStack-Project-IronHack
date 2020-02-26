@@ -64,7 +64,10 @@ router.get('/:postId', (req, res, next) => {
     .then(postData => {
       postInfo = postData;
       //console.log(postInfo);
-      return Comment.find({ post: postId }).populate('author');
+      return Comment.find({ post: postId })
+        .sort({ createdAt: -1 })
+        .populate('author')
+        .lean();
     })
     .then(comments => {
       user.toString() == postInfo.author._id.toString()
@@ -74,22 +77,20 @@ router.get('/:postId', (req, res, next) => {
         //console.log(comment);
         comment.creation = new Date(comment.createdAt);
       });
-      res.render('page/single-post', { postInfo, comments, ownProfile });
+      const editedComments = comments.map((val, ind) => {
+        console.log('filtering', user, val.author._id);
+        if (val.author._id.toString() == user.toString()) {
+          val.canDelete = true;
+          return val;
+        } else {
+          return val;
+        }
+      });
+
+      console.log('mine', editedComments);
+      res.render('page/single-post', { postInfo, editedComments, ownProfile });
     })
     .catch(error => next(error));
-});
-
-router.post('/:postId/delete', (req, res, next) => {
-  const postId = req.params.postId;
-
-  Post.findByIdAndDelete(postId)
-    .then(postInfo => {
-      console.log('Remove Post', postInfo);
-      res.redirect('/');
-    })
-    .catch(error => {
-      next(error);
-    });
 });
 
 //Comments
@@ -107,6 +108,36 @@ router.post('/:postId/comment', routeGuard(true), (req, res, next) => {
       res.redirect(`/post/${postId}`);
     })
     .catch(error => next(error));
+});
+
+router.post('/:postId/:commentId/delete', (req, res, next) => {
+  console.log('I am deleting a comment');
+  const commentId = req.params.commentId;
+  const { postId } = req.params;
+
+  console.log('HREE', commentId);
+
+  Comment.findByIdAndDelete(commentId)
+    .then(postInfo => {
+      console.log('Remove Comment', postInfo);
+      res.redirect(`/post/${postId}`);
+    })
+    .catch(error => {
+      next(error);
+    });
+});
+
+router.post('/:postId/delete', (req, res, next) => {
+  const postId = req.params.postId;
+
+  Post.findByIdAndDelete(postId)
+    .then(postInfo => {
+      console.log('Remove Post', postInfo);
+      res.redirect('/');
+    })
+    .catch(error => {
+      next(error);
+    });
 });
 
 //delete
