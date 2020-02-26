@@ -1,4 +1,4 @@
-/* 'use strict';
+ 'use strict';
 
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
@@ -115,4 +115,4 @@ passport.use(new GoogleStrategy({
     }
   )
 );
-*/
+
