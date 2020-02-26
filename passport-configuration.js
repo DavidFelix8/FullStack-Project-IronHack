@@ -82,21 +82,18 @@ passport.use(
       callbackURL: 'http://localhost:3000/authentication/google-callback'
     },
     (accessToken, refreshToken, profile, callback) => {
-      console.log(profile);
-      const data = {
-        name: profile.displayName,
-        googleId: profile.id,
-        photo: profile.photos.length ? profile.photos[0].value : undefined
-      };
-
       User.findOne({
-        googleId: data.profile.id
+        googleId: profile.id
       })
         .then(user => {
           if (user) {
             return Promise.resolve(user);
           } else {
-            return User.create(data);
+            return User.create({
+              googleId: profile.id,
+              name: profile.displayName,
+              profilePic: profile.photos[0].value
+            });
           }
         })
         .then(user => {
