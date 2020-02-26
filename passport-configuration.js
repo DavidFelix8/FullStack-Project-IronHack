@@ -1,11 +1,14 @@
-/* 'use strict';
+'use strict';
 
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
-const GoogleStrategy = require('passport-google-oauth20').Strategy;
+const passportGoogle = require('passport-google-oauth20').Strategy;
+
+const PassportGoogleStrategy = passportGoogle.Strategy;
+
+const bcryptjs = require('bcryptjs');
 
 const User = require('./models/user');
-const bcryptjs = require('bcryptjs');
 
 passport.serializeUser((user, callback) => {
   callback(null, user._id);
@@ -29,7 +32,6 @@ passport.use(
       passReqToCallback: true
     },
     (req, email, password, callback) => {
-      console.log('req.body', req.body);
       const name = req.body.name;
       bcryptjs
         .hash(password, 10)
@@ -41,11 +43,9 @@ passport.use(
           });
         })
         .then(user => {
-          console.log('USER', user);
           callback(null, user);
         })
         .catch(error => {
-          console.log('ERROR', error);
           callback(error);
         });
     }
@@ -60,9 +60,7 @@ passport.use(
       email
     })
       .then(document => {
-        //console.log(req.body);
         user = document;
-        console.log(user);
         return bcryptjs.compare(password, user.passwordHash);
       })
       .then(passwordMatchesHash => {
@@ -78,41 +76,37 @@ passport.use(
   })
 );
 
-passport.use(new GoogleStrategy({
-      clientID: process.env.GOOGLE_CLIENT_ID,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-      callbackURL:"http://www.example.com/auth/google/callback"
-      //scope: 'user:email'
-    },
-  /*   function(accessToken, refreshToken, profile, cb) {
-      User.findOrCreate({ googleId: profile.id }, function (err, user) {
-      return cb(err, user);
+const GoogleStrategy = new PassportGoogleStrategy(
+  {
+    clientID: process.env.GOOGLE_CLIENT_ID,
+    clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+    callbackURL: 'http://localhost:3000/auth/google/callback'
+  },
+  (accessToken, refreshToken, profile, callback) => {
+    const data = {
+      name: profile.displayName,
+      googleId: profile.id,
+      googleUsername: profile.username,
+      photo: profile.photos.length ? profile.photos[0].value : undefined
+    };
+
+    User.findOne({
+      googleId: data.googleId
+    })
+      .then(user => {
+        if (user) {
+          return Promise.resolve(user);
+        } else {
+          return User.create(data);
+        }
+      })
+      .then(user => {
+        callback(null, user);
+      })
+      .catch(error => {
+        callback(error);
       });
-    }
-  )); */
-/*(accessToken, refreshToken, profile, callback) => {
-      const { displayName: name, emails, photos: [{ value: photo } = {}] = [] } = profile;
-      const primaryEmail = emails.find(email => email.primary).value;
-      User.findOne({ email: primaryEmail })
-        .then(user => {
-          if (user) {
-            return Promise.resolve(user);
-          } else {
-            return User.create({
-              email: primaryEmail,
-              photo,
-              name,
-              githubToken: accessToken
-            });
-          }
-        })
-        .then(user => {
-          callback(null, user);
-        })
-        .catch(error => {
-          callback(error);
-        });
-    }
-  )
+  }
 );
-*/
+
+passport.use('google', GoogleStrategy);
