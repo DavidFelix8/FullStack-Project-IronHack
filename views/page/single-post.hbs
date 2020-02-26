@@ -1,21 +1,22 @@
 <article>
- <h1>{{ postInfo.title }}</h1>
-  <img src="{{postInfo.photo}}" alt="">
-  <h3>{{postInfo.author.name}}</h3>
-  <h5>{{postInfo.category}}</h5>
-  {{#if isOwnProfile}}
-    <button>Delete</button>
-  {{/if}}
+ <h1>Title: {{ postInfo.title }}</h1>
+  <img src="{{postInfo.photo}}" alt="Image-Post">
+  <h3>Author: {{postInfo.author.name}}</h3>
+  <h5>Category: {{postInfo.category}}</h5>
 </article>
 
-<footer>
-  <h4>Comments</h4>
-  {{#each comments}}
-    {{>comment}}
-  {{/each}}
+  {{#if ownProfile}}
+    <button>Delete</button>
+  {{/if}}
+
+<footer>  
   {{#if user}}
   <h4>Add a comment</h4>
   {{>commentform}}
   <br>
   {{/if}}
+  <h4>Comments</h4>
+  {{#each comments}}
+    {{>comment}}
+  {{/each}}
 </footer>
