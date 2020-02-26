@@ -9,7 +9,7 @@ router.get('/', (req, res, next) => {
   Post.find()
     .populate('author')
     .then(posts => {
-      console.log(posts);
+      //console.log(posts);
       res.render('index', { posts });
     })
     .catch(error => next(error));

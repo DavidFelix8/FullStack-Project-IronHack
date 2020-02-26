@@ -15,9 +15,9 @@ router.get('/create', routeGuard(true), (req, res, next) => {
 });
 
 router.post('/create', routeGuard(true), (req, res, next) => {
-  console.log(req.body);
+  //console.log(req.body);
   const { category } = req.body;
-  console.log(category);
+  //console.log(category);
   Page.create({
     category
   })

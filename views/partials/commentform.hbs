@@ -1,6 +1,6 @@
-<form action="/post/{{ postInfo._id }}/comment" method="POST">
+<form action="/post/{{ postInfo._id }}/comment" method="POST" class="d-flex flex-column">
   <label for="input-content"></label>
-  <textarea name="content" id="input-content" placeholder="You can add your comment here..."></textarea>
+  <textarea name="content" id="input-content" rows="4" cols="80" placeholder="You can add your comment here..."></textarea>
   <br>
-  <button>Submit Comment</button>
+  <button class="w-25">Submit Comment</button>
 </form>

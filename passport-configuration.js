@@ -1,8 +1,8 @@
-'use strict';
+/* 'use strict';
 
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
-const GitHubStrategy = require('passport-github').Strategy;
+const GoogleStrategy = require('passport-google-oauth20').Strategy;
 
 const User = require('./models/user');
 const bcryptjs = require('bcryptjs');
@@ -78,16 +78,19 @@ passport.use(
   })
 );
 
-passport.use(
-  'github',
-  new GitHubStrategy(
-    {
-      clientID: process.env.GITHUB_CLIENT_ID,
-      clientSecret: process.env.GITHUB_CLIENT_SECRET,
-      callbackURL: 'http://localhost:3000/authentication/github-callback',
-      scope: 'user:email'
+passport.use(new GoogleStrategy({
+      clientID: process.env.GOOGLE_CLIENT_ID,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+      callbackURL:"http://www.example.com/auth/google/callback"
+      //scope: 'user:email'
     },
-    (accessToken, refreshToken, profile, callback) => {
+  /*   function(accessToken, refreshToken, profile, cb) {
+      User.findOrCreate({ googleId: profile.id }, function (err, user) {
+      return cb(err, user);
+      });
+    }
+  )); */
+/*(accessToken, refreshToken, profile, callback) => {
       const { displayName: name, emails, photos: [{ value: photo } = {}] = [] } = profile;
       const primaryEmail = emails.find(email => email.primary).value;
       User.findOne({ email: primaryEmail })
@@ -112,3 +115,4 @@ passport.use(
     }
   )
 );
+*/
