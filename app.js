@@ -9,6 +9,8 @@ const expressSession = require('express-session');
 const logger = require('morgan');
 const mongoose = require('mongoose');
 const passport = require('passport');
+const timestamp = require('time-stamp');
+const Timestamps = require('mongoose-timestamp');
 const sassMiddleware = require('node-sass-middleware');
 const serveFavicon = require('serve-favicon');
 const bindUserToViewLocals = require('./middleware/bind-user-to-view-locals.js');
@@ -20,10 +22,10 @@ const postRouter = require('./routes/post');
 const profileRouter = require('./routes/profile');
 const pageRouter = require('./routes/page');
 
-// const handlebarsHelperDate = require('helper-date');
+const handlebarsHelperDate = require('helper-date');
 const hbs = require('hbs');
-
-// hbs.registerHelper('date', handlebarsHelperDate);
+//hbs.registerHelper('time', Timestamps);
+//hbs.registerHelper('date', handlebarsHelperDate);
 hbs.registerPartials(join(__dirname, 'views/partials'));
 
 const app = express();
@@ -75,6 +77,27 @@ app.use('/post', postRouter);
 // Catch missing routes and forward to error handler
 app.use((req, res, next) => {
   next(createError(404));
+});
+
+hbs.registerHelper('date', value => {
+  const dt = value;
+  //console.log(value);
+  return `${(dt.getMonth() + 1).toString().padStart(2, '0')}/${dt
+    .getDate()
+    .toString()
+    .padStart(2, '0')}/${dt
+    .getFullYear()
+    .toString()
+    .padStart(4, '0')} ${dt
+    .getHours()
+    .toString()
+    .padStart(2, '0')}:${dt
+    .getMinutes()
+    .toString()
+    .padStart(2, '0')}:${dt
+    .getSeconds()
+    .toString()
+    .padStart(2, '0')}`;
 });
 
 // Catch all error handler

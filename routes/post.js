@@ -69,6 +69,10 @@ router.get('/:postId', (req, res, next) => {
       user.toString() == postInfo.author._id.toString()
         ? (ownProfile = true)
         : (ownProfile = false);
+      comments.map(comment => {
+        //console.log(comment);
+        comment.creation = new Date(comment.createdAt);
+      });
       res.render('page/single-post', { postInfo, comments, ownProfile });
     })
     .catch(error => next(error));

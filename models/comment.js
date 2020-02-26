@@ -2,27 +2,28 @@
 
 const mongoose = require('mongoose');
 
-const schema = new mongoose.Schema({
-  post: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'Post',
-    required: true
+const schema = new mongoose.Schema(
+  { 
+    post: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Post',
+      required: true
+    },
+    author: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'User',
+      required: true
+    },
+    content: {
+      type: String,
+      required: true,
+      maxlength: 500,
+      trim: true
+    }
   },
-  author: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'User',
-    required: true
-  },
-  content: {
-    type: String,
-    required: true,
-    maxlength: 500,
-    trim: true
+  {
+    timestamps: true
   }
-  /*   timestamps: {
-    createdAt: 'creationDate',
-    updatedAt: 'updateDate'
-  } */
-});
+);
 
 module.exports = mongoose.model('Comment', schema);
