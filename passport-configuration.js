@@ -82,6 +82,7 @@ passport.use(
       callbackURL: 'http://localhost:3000/authentication/google-callback'
     },
     (accessToken, refreshToken, profile, callback) => {
+      console.log(profile);
       User.findOne({
         googleId: profile.id
       })
