@@ -1,5 +1,7 @@
 <div class="edit-profile">
-    <form action="/profile/edit/{{user._id}}" method="POST">
+    <form action="/profile/{{user._id}}/edit" method="POST" enctype="multipart/form-data">    
+        <label for="input-Photo">Photo</label>
+        <input type="file" name="photo" id="input-Photo" accept="image/*" />
          <div class="form-group">
             <label for="inputUser">Name</label>
             <input name="name" type="text" value={{user.name}} class="form-control" id="inputUser" placeholder="Enter Your Name" required>
@@ -9,16 +11,6 @@
             <input name="email" type="email" value={{user.email}} class="form-control" id="inputEmail" placeholder="Enter Your Email" required>
         </div>       
         <button type="submit" class="btn btn-primary">Save Changes</button>
-    </form>
-     
+    </form>     
 </div>
 
-<h2>MY POSTS:</h2>
-
-<div>
-  {{#each posts}}
-
-  {{>post}}
-
-  {{/each}}
-</div>

@@ -83,6 +83,12 @@ passport.use(
     },
     (accessToken, refreshToken, profile, callback) => {
       console.log(profile);
+      const data = {
+        googleId: profile.id,
+        name: profile.displayName,
+        // email: profile.emails.find(object => object.primary).value,
+        profilePic: profile.photos[0].value
+      };
       User.findOne({
         googleId: profile.id
       })
@@ -90,11 +96,7 @@ passport.use(
           if (user) {
             return Promise.resolve(user);
           } else {
-            return User.create({
-              googleId: profile.id,
-              name: profile.displayName,
-              profilePic: profile.photos[0].value
-            });
+            return User.create(data);
           }
         })
         .then(user => {
