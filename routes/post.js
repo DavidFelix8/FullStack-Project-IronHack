@@ -53,7 +53,8 @@ router.post('/create', routeGuard(true), uploader.single('photo'), (req, res, ne
 });
 
 router.get('/:postId', (req, res, next) => {
-  const user = req.user._id;
+  let user;
+  req.user ? (user = req.user._id) : (user = '');
   const postId = req.params.postId;
   let postInfo;
   let ownProfile;
@@ -72,6 +73,19 @@ router.get('/:postId', (req, res, next) => {
       res.render('page/single-post', { postInfo, comments, ownProfile });
     })
     .catch(error => next(error));
+});
+
+router.post('/:postId/delete', (req, res, next) => {
+  const postId = req.params.postId;
+
+  Post.findByIdAndDelete(postId)
+    .then(postInfo => {
+      console.log('Remove Post', postInfo);
+      res.redirect('/');
+    })
+    .catch(error => {
+      next(error);
+    });
 });
 
 //Comments

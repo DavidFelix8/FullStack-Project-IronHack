@@ -6,7 +6,9 @@
 </article>
 
   {{#if ownProfile}}
+  <form action="/post/{{postInfo._id}}/delete" method="POST">
     <button class="">Delete</button>
+  </form>
   {{/if}}
 
 <footer class="d-flex justify-content-center align-items-md-center flex-column">  
