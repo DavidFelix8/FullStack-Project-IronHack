@@ -91,4 +91,6 @@ router.post('/:postId/comment', routeGuard(true), (req, res, next) => {
     .catch(error => next(error));
 });
 
+//delete
+
 module.exports = router;
