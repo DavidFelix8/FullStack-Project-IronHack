@@ -1,15 +1,15 @@
-<article>
- <h1>Title: {{ postInfo.title }}</h1>
+<article class="single-post d-flex justify-content-center align-items-md-center flex-column">
+  <h1>Title: {{ postInfo.title }}</h1>
   <img src="{{postInfo.photo}}" alt="Image-Post">
   <h3>Author: {{postInfo.author.name}}</h3>
   <h5>Category: {{postInfo.category}}</h5>
 </article>
 
   {{#if ownProfile}}
-    <button>Delete</button>
+    <button class="">Delete</button>
   {{/if}}
 
-<footer>  
+<footer class="d-flex justify-content-center align-items-md-center flex-column">  
   {{#if user}}
   <h4>Add a comment</h4>
   {{>commentform}}

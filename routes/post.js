@@ -85,7 +85,7 @@ router.post('/:postId/comment', routeGuard(true), (req, res, next) => {
     content: content
   })
     .then(newComment => {
-      console.log(newComment);
+      //console.log(newComment);
       res.redirect(`/post/${postId}`);
     })
     .catch(error => next(error));
