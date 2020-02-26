@@ -1,6 +1,7 @@
 'use strict';
 
 const mongoose = require('mongoose');
+const findOrCreate = require('mongoose-findorcreate');
 
 const schema = new mongoose.Schema({
   name: {
@@ -37,4 +38,8 @@ const schema = new mongoose.Schema({
   }
 });
 
-module.exports = mongoose.model('User', schema);
+schema.plugin(findOrCreate);
+
+const User = mongoose.model('User', schema);
+
+module.exports = User;

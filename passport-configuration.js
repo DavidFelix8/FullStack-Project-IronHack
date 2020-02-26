@@ -2,9 +2,7 @@
 
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
-const passportGoogle = require('passport-google-oauth20').Strategy;
-
-const PassportGoogleStrategy = passportGoogle.Strategy;
+const GoogleStrategy = require('passport-google-oauth20').Strategy;
 
 const bcryptjs = require('bcryptjs');
 
@@ -76,37 +74,37 @@ passport.use(
   })
 );
 
-const GoogleStrategy = new PassportGoogleStrategy(
-  {
-    clientID: process.env.GOOGLE_CLIENT_ID,
-    clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    callbackURL: 'http://localhost:3000/auth/google/callback'
-  },
-  (accessToken, refreshToken, profile, callback) => {
-    const data = {
-      name: profile.displayName,
-      googleId: profile.id,
-      googleUsername: profile.username,
-      photo: profile.photos.length ? profile.photos[0].value : undefined
-    };
+passport.use(
+  new GoogleStrategy(
+    {
+      clientID: process.env.GOOGLE_CLIENT_ID,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+      callbackURL: 'http://localhost:3000/authentication/google-callback'
+    },
+    (accessToken, refreshToken, profile, callback) => {
+      console.log(profile);
+      const data = {
+        name: profile.displayName,
+        googleId: profile.id,
+        photo: profile.photos.length ? profile.photos[0].value : undefined
+      };
 
-    User.findOne({
-      googleId: data.googleId
-    })
-      .then(user => {
-        if (user) {
-          return Promise.resolve(user);
-        } else {
-          return User.create(data);
-        }
+      User.findOne({
+        googleId: data.profile.id
       })
-      .then(user => {
-        callback(null, user);
-      })
-      .catch(error => {
-        callback(error);
-      });
-  }
+        .then(user => {
+          if (user) {
+            return Promise.resolve(user);
+          } else {
+            return User.create(data);
+          }
+        })
+        .then(user => {
+          callback(null, user);
+        })
+        .catch(error => {
+          callback(error);
+        });
+    }
+  )
 );
-
-passport.use('google', GoogleStrategy);

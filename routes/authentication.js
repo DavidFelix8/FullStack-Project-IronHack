@@ -35,7 +35,7 @@ router.post(
 router.get('/google', passport.authenticate('google', { scope: ['profile'] }));
 
 router.get(
-  '/google/callback',
+  '/google-callback',
   passport.authenticate('google', {
     successRedirect: '/',
     failureRedirect: '/authentication/sign-in'
@@ -46,7 +46,5 @@ router.post('/sign-out', (req, res, next) => {
   req.logout();
   res.redirect('/');
 });
-
-module.exports = router;
 
 module.exports = router;

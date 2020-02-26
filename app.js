@@ -14,10 +14,10 @@ const passport = require('passport');
 const sassMiddleware = require('node-sass-middleware');
 const serveFavicon = require('serve-favicon');
 const bindUserToViewLocals = require('./middleware/bind-user-to-view-locals.js');
-const passportConfigure = require('./passport-configuration.js');
 const indexRouter = require('./routes/index');
 const authenticationRouter = require('./routes/authentication');
 const postRouter = require('./routes/post');
+const passportConfigure = require('./passport-configuration.js');
 
 const profileRouter = require('./routes/profile');
 const pageRouter = require('./routes/page');
@@ -64,6 +64,7 @@ app.use(
     })
   })
 );
+
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(bindUserToViewLocals);
