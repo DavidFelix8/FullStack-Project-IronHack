@@ -17,6 +17,7 @@ nav {
 nav a {
   color: White;
   margin-right: 1em;
+  text-decoration: none;
 }
 
 a {
@@ -110,6 +111,18 @@ a {
 
   #myUL button:hover {
     background-color: #eee;
+  }
+
+  .post {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 70%;
+    height: 70%;
+  }
+
+  .post a {
+    text-decoration: none;
   }
 
   /*  #myUL li a {
