@@ -5,12 +5,20 @@
   font-family: 'Open Sans';
 }
 
+button:focus {
+  outline: 0;
+}
+
 body {
   background-color: rgba(230, 226, 235, 0.5);
 }
 
 nav {
   text-decoration: none;
+}
+
+.navbar {
+  box-shadow: 0 2rem 4rem -1rem rgba(250, 123, 123, 0.685);
 }
 
 nav a {
@@ -21,6 +29,24 @@ nav a {
 
 a {
   color: black;
+}
+
+//4lolz img
+.fourLolz-logo {
+  width: 30%;
+  height: 30%;
+}
+
+//
+#post-author-share-fb {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+//Font-Awesome Icons Sign-In
+.auth-icon {
+  margin-right: 0.3rem;
 }
 
 //Authentication/Sign-In
@@ -41,8 +67,10 @@ a {
 }
 
 .own-profile {
-  margin-top: 1em;
-  margin-left: 1em;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 3rem;
+  // margin-left: 1em;
 }
 
 .own-profile button {
@@ -60,8 +88,12 @@ a {
   align-items: center;
 }
 
+.author-div-posts {
+  width: 90%;
+  margin: 4rem auto;
+}
+
 .author-posts {
-  height: 80%;
 }
 
 .post-title {
@@ -81,6 +113,25 @@ a {
   background-color: white;
   border-radius: 0.2rem;
   border: 0.1rem solid rgb(206, 212, 218);
+}
+
+//Button Images Index.hbs
+.button-lang-img-css {
+  float: left;
+  width: 1.8rem;
+  height: 1.5rem;
+}
+
+.button-lang-img-html {
+  float: left;
+  width: 1.8rem;
+  height: 1.5rem;
+}
+
+.button-lang-img-js {
+  float: left;
+  width: 1.5rem;
+  height: 1.3rem;
 }
 
 //Search List Index.hbs
@@ -140,4 +191,37 @@ a {
   #myULToggler {
     visibility: hidden;
   }
+}
+
+.buttontop {
+  position: fixed;
+  border: none;
+  width: 30px;
+  height: 30px;
+  background-color: azure;
+  bottom: 20px;
+  right: 3%;
+  z-index: 2;
+}
+
+//Facebook Share
+/* .share-fb {
+  background-image: url('/images/share-fb.jpg');
+  background-position: center;
+  background-size: cover;
+} */
+
+.post a {
+  text-decoration: none;
+}
+
+#single-post img {
+  display: flex;
+  align-items: center;
+}
+
+.horizontalLineBetweenPosts {
+  display: flex;
+  align-items: center;
+  width: 60%;
 }

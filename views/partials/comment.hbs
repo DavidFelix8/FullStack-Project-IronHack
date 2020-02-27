@@ -1,10 +1,11 @@
 <div class="comment-item">
   <small><a class="font-weight-bold" href="/profile/{{ author._id }}">{{ author.name }}</a></small>
   <p><large>{{ content }}</large><br><small>on {{date creation }}</small></p>
+  <hr class="comment-horizontal-line">
 </div>
 
 {{#if canDelete}}
-  <form action="/post/{{ post }}/{{ _id }}/delete" method="POST">
+  <form class="ml-5" action="/post/{{ post }}/{{ _id }}/delete" method="POST">
   <button class="delete-btn">Delete</button>
 </form>
   {{/if}}

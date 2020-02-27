@@ -3,12 +3,24 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Open Sans'; }
+<<<<<<< HEAD
+
+button:focus {
+  outline: 0; }
+=======
+>>>>>>> 7db2dbb39f70cbce653aa332eded1f918a426303
 
 body {
   background-color: rgba(230, 226, 235, 0.5); }
 
 nav {
   text-decoration: none; }
+<<<<<<< HEAD
+
+.navbar {
+  box-shadow: 0 2rem 4rem -1rem rgba(250, 123, 123, 0.685); }
+=======
+>>>>>>> 7db2dbb39f70cbce653aa332eded1f918a426303
 
 nav a {
   color: White;
@@ -17,6 +29,21 @@ nav a {
 
 a {
   color: black; }
+<<<<<<< HEAD
+
+.fourLolz-logo {
+  width: 30%;
+  height: 30%; }
+
+#post-author-share-fb {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: flex-start; }
+=======
+>>>>>>> 7db2dbb39f70cbce653aa332eded1f918a426303
+
+.auth-icon {
+  margin-right: 0.3rem; }
 
 .sign-in-auth {
   margin: 10rem;
@@ -32,8 +59,9 @@ a {
   margin-top: 1em; }
 
 .own-profile {
-  margin-top: 1em;
-  margin-left: 1em; }
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 3rem; }
 
 .own-profile button {
   margin-top: 1em; }
@@ -47,8 +75,13 @@ a {
   display: flex;
   align-items: center; }
 
-.author-posts {
-  height: 80%; }
+.author-div-posts {
+  width: 90%;
+<<<<<<< HEAD
+=======
+  height: 80%;
+>>>>>>> 7db2dbb39f70cbce653aa332eded1f918a426303
+  margin: 4rem auto; }
 
 .post-title {
   margin-top: 1em;
@@ -65,6 +98,21 @@ a {
   background-color: white;
   border-radius: 0.2rem;
   border: 0.1rem solid #ced4da; }
+
+.button-lang-img-css {
+  float: left;
+  width: 1.8rem;
+  height: 1.5rem; }
+
+.button-lang-img-html {
+  float: left;
+  width: 1.8rem;
+  height: 1.5rem; }
+
+.button-lang-img-js {
+  float: left;
+  width: 1.5rem;
+  height: 1.3rem; }
 
 #myInput {
   margin-left: 4rem; }
@@ -106,5 +154,35 @@ a {
     background-color: #eee; }
   #myULToggler {
     visibility: hidden; } }
+
+.buttontop {
+  position: fixed;
+  border: none;
+  width: 30px;
+  height: 30px;
+  background-color: azure;
+  bottom: 20px;
+  right: 3%;
+  z-index: 2; }
+
+/* .share-fb {
+  background-image: url('/images/share-fb.jpg');
+  background-position: center;
+  background-size: cover;
+} */
+.post a {
+  text-decoration: none; }
+
+#single-post img {
+  display: flex;
+  align-items: center; }
+<<<<<<< HEAD
+=======
+
+.horizontalLineBetweenPosts {
+  display: flex;
+  align-items: center;
+  width: 60%; }
+>>>>>>> 7db2dbb39f70cbce653aa332eded1f918a426303
 
 /*# sourceMappingURL=style.css.map */

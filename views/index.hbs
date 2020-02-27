@@ -2,9 +2,9 @@
   <aside id ="myUL">
     <h2>Categories</h2>  
     <form class="d-flex flex-column" action="" method="GET">
-      <button type="submit" name="category" value="CSS">CSS</button>
-      <button type="submit" name="category" value="HTML">HTML</button>
-      <button type="submit" name="category" value="JavaScript">JavaSript</button>
+      <button type="submit" name="category" value="CSS" ><img class="button-lang-img-css" src="/images/css.png" alt="CSS">CSS</button>
+      <button type="submit" name="category" value="HTML"><img class="button-lang-img-html" src="/images/html-5.png" alt="HTML">HTML</button>
+      <button type="submit" name="category" value="JavaScript"><img class="button-lang-img-js" src="/images/java-script.png" alt="JavaScript">JavaScript</button>      
       <button type="submit" name="category" value="React">React</button>
       <button type="submit" name="category" value="Phyton">Phyton</button>
       <button type="submit" name="category" value="C++">C++</button>
@@ -21,6 +21,8 @@
   <h2>Likes: {{numLikes}}</h2>
 
 {{/each}}
+
+<button onclick="topFunction()" class="buttontop" title="Go to top"><i class="fas fa-angle-up fa-2x ArrowUpTop"></i></button>            
 
 {{!-- <main>
   <section>
