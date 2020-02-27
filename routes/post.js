@@ -97,7 +97,6 @@ router.get('/:postId/edit', (req, res, next) => {
   const { postId } = req.params;
   Post.findById(postId)
     .then(data => {
-      console.log('data for edit', data);
       res.render(`page/edit-post`, { data });
     })
     .catch(error => {
