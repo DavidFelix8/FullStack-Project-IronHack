@@ -5,12 +5,20 @@
   font-family: 'Open Sans';
 }
 
+button:focus {
+  outline: 0;
+}
+
 body {
   background-color: rgba(230, 226, 235, 0.5);
 }
 
 nav {
   text-decoration: none;
+}
+
+.navbar {
+  box-shadow: 0 2rem 4rem -1rem rgba(250, 123, 123, 0.685);
 }
 
 nav a {
@@ -21,6 +29,19 @@ nav a {
 
 a {
   color: black;
+}
+
+//4lolz img
+.fourLolz-logo {
+  width: 30%;
+  height: 30%;
+}
+
+//
+#post-author-share-fb {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 //Font-Awesome Icons Sign-In
@@ -67,10 +88,12 @@ a {
   align-items: center;
 }
 
-.author-posts {
+.author-div-posts {
   width: 90%;
-  height: 80%;
   margin: 4rem auto;
+}
+
+.author-posts {
 }
 
 .post-title {
@@ -196,7 +219,7 @@ a {
 
 .buttontop {
   position: fixed;
-  outline: none;
+  border: none;
   width: 30px;
   height: 30px;
   background-color: azure;
