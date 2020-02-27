@@ -141,3 +141,12 @@ a {
     visibility: hidden;
   }
 }
+
+.post a {
+  text-decoration: none;
+}
+
+#single-post img {
+  display: flex;
+  align-items: center;
+}
