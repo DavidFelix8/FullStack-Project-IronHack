@@ -1,8 +1,9 @@
 <article class ="own-profile">
 
-<h6>Profile Picture:</h6>
+<h5>Welcome to your profile {{author.name}}</h5>
 
 {{#if isOwnProfile}}
+<h5>Profile Picture:</h5>
 <picture class="profile-image">
     <img class="ml-5 w-25 h-25" src={{author.photo}} alt="No-pic">
 </picture>
@@ -14,13 +15,15 @@
 
 </article>
 
+
+<section class="author-posts">
  <h4>{{author.name}}'s Posts:</h4>
 
-<div class="author-posts">
+  <div class="d-flex flex-row">
+    {{#each posts}}
 
-  {{#each posts}}
+    {{>post}}
 
-  {{>post}}
-
-  {{/each}}
-</div>
+    {{/each}}
+  </div>
+</section>

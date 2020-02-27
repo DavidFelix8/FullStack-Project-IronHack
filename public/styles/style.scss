@@ -23,6 +23,11 @@ a {
   color: black;
 }
 
+//Font-Awesome Icons Sign-In
+.auth-icon {
+  margin-right: 0.3rem;
+}
+
 //Authentication/Sign-In
 .sign-in-auth {
   margin: 10rem;
@@ -41,8 +46,10 @@ a {
 }
 
 .own-profile {
-  margin-top: 1em;
-  margin-left: 1em;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 3rem;
+  // margin-left: 1em;
 }
 
 .own-profile button {
@@ -61,7 +68,9 @@ a {
 }
 
 .author-posts {
+  width: 90%;
   height: 80%;
+  margin: 4rem auto;
 }
 
 .post-title {
@@ -81,6 +90,25 @@ a {
   background-color: white;
   border-radius: 0.2rem;
   border: 0.1rem solid rgb(206, 212, 218);
+}
+
+//Button Images Index.hbs
+.button-lang-img-css {
+  float: left;
+  width: 1.8rem;
+  height: 1.5rem;
+}
+
+.button-lang-img-html {
+  float: left;
+  width: 1.8rem;
+  height: 1.5rem;
+}
+
+.button-lang-img-js {
+  float: left;
+  width: 1.5rem;
+  height: 1.3rem;
 }
 
 //Search List Index.hbs
@@ -141,6 +169,24 @@ a {
     visibility: hidden;
   }
 }
+
+.buttontop {
+  position: fixed;
+  outline: none;
+  width: 30px;
+  height: 30px;
+  background-color: azure;
+  bottom: 20px;
+  right: 3%;
+  z-index: 2;
+}
+
+//Facebook Share
+/* .share-fb {
+  background-image: url('/images/share-fb.jpg');
+  background-position: center;
+  background-size: cover;
+} */
 
 .post a {
   text-decoration: none;

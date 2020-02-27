@@ -18,6 +18,9 @@ nav a {
 a {
   color: black; }
 
+.auth-icon {
+  margin-right: 0.3rem; }
+
 .sign-in-auth {
   margin: 10rem;
   text-decoration: none; }
@@ -32,8 +35,9 @@ a {
   margin-top: 1em; }
 
 .own-profile {
-  margin-top: 1em;
-  margin-left: 1em; }
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 3rem; }
 
 .own-profile button {
   margin-top: 1em; }
@@ -48,7 +52,9 @@ a {
   align-items: center; }
 
 .author-posts {
-  height: 80%; }
+  width: 90%;
+  height: 80%;
+  margin: 4rem auto; }
 
 .post-title {
   margin-top: 1em;
@@ -65,6 +71,21 @@ a {
   background-color: white;
   border-radius: 0.2rem;
   border: 0.1rem solid #ced4da; }
+
+.button-lang-img-css {
+  float: left;
+  width: 1.8rem;
+  height: 1.5rem; }
+
+.button-lang-img-html {
+  float: left;
+  width: 1.8rem;
+  height: 1.5rem; }
+
+.button-lang-img-js {
+  float: left;
+  width: 1.5rem;
+  height: 1.3rem; }
 
 #myInput {
   margin-left: 4rem; }
@@ -107,6 +128,21 @@ a {
   #myULToggler {
     visibility: hidden; } }
 
+.buttontop {
+  position: fixed;
+  outline: none;
+  width: 30px;
+  height: 30px;
+  background-color: azure;
+  bottom: 20px;
+  right: 3%;
+  z-index: 2; }
+
+/* .share-fb {
+  background-image: url('/images/share-fb.jpg');
+  background-position: center;
+  background-size: cover;
+} */
 .post a {
   text-decoration: none; }
 
