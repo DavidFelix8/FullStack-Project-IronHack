@@ -33,8 +33,8 @@ a {
 
 //4lolz img
 .fourLolz-logo {
-  width: 6%;
-  height: 5%;
+  width: 7%;
+  height: 7%;
 }
 
 //
@@ -255,4 +255,27 @@ a {
   align-items: center;
   width: 60%;
   margin: 0 auto;
+}
+
+.feed-1stpage a {
+  text-decoration: none;
+}
+
+.navbar a {
+  text-decoration: none;
+}
+
+.btn-edit-delete {
+  display: flex;
+  margin-top: 1em;
+  justify-content: space-evenly;
+  margin-left: 5rem;
+}
+
+.fb-share-button {
+  margin-left: 5rem;
+}
+
+.btn-edit-post a {
+  text-decoration: none;
 }
