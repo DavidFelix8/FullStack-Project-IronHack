@@ -2,7 +2,7 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <a class="navbar-brand" href="/"><img class="fourLolz-logo" src="/images/4lolz-logo-final.png" alt="4lolz"></a>
+ <img class="navbar-brand fourLolz-logo" src="/images/logo-4lolz.png" alt="4lolz"></img>
   
   <div class="collapse navbar-collapse" id="navbarTogglerDemo03">  
     <aside id ="myULToggler">
@@ -19,7 +19,7 @@
   <a href="/post/create">Upload</a>
   <a href="/profile/{{user._id}}">{{ user.name }}'s Profile</a>
   <form action="/authentication/sign-out" method="POST">
-    <button><i class="fas fa-sign-out-alt"></i>Sign Out</button>
+    <button><i class="fas fa-sign-out-alt"></i>Sign Out</button>    
   </form>
 {{else}}
     <ul class="nav navbar-nav navbar-right">
