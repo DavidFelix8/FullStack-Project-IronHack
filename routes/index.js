@@ -7,6 +7,7 @@ const Post = require('./../models/post');
 
 router.get('/', (req, res, next) => {
   Post.find()
+    .sort({ createdAt: -1 })
     .populate('author')
     .then(posts => {
       //console.log(posts);

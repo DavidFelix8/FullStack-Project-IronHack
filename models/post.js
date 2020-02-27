@@ -25,8 +25,7 @@ const schema = new mongoose.Schema(
   },
   {
     timestamps: {
-      createdAt: 'creationDate',
-      updatedAt: 'updateDate'
+      createdAt: 'createdAt'
     }
   }
 );

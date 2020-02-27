@@ -1,8 +1,8 @@
 <article class="single-post d-flex justify-content-center align-items-md-center flex-column">
-  <h1>Title: {{ postInfo.title }}</h1>
+  <h1>{{ postInfo.title }}</h1>
   <img class="w-75 h-75" src="{{postInfo.photo}}" alt="Image-Post">
-  <h3>Author: {{postInfo.author.name}}</h3>
-  <h5>Category: {{postInfo.category}}</h5>
+  <h3 class="w-75 m-auto">{{postInfo.author.name}}</h3>
+  <h5 class="w-75 m-auto">Category: {{postInfo.category}}</h5>
 </article>
 
   {{#if ownProfile}}
@@ -10,7 +10,6 @@
     <button class="">Delete</button>
   </form>
   {{/if}}
-
 <footer class="d-flex justify-content-center align-items-md-center flex-column">  
   {{#if user}}
   <h4>Add a comment</h4>
@@ -18,7 +17,7 @@
   <br>
   {{/if}}
   <h4>Comments</h4>
-  {{#each comments}}
+  {{#each editedComments }}
     {{>comment}}
   {{/each}}
 </footer>
