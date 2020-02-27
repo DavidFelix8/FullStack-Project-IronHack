@@ -2,10 +2,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Open Sans';
 }
 
 body {
   background-color: rgba(230, 226, 235, 0.5);
+  text-decoration: none;
+}
+
+nav {
+  text-decoration: none;
 }
 
 nav a {
@@ -29,7 +35,43 @@ a {
 }
 //Profile/Edit
 .edit-profile {
-  margin: 10rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
+}
+
+.own-profile {
+  margin-top: 1em;
+  margin-left: 1em;
+}
+
+.own-profile button {
+  margin-top: 1em;
+}
+
+.author-profile {
+  display: flex;
+  margin-left: 3em;
+}
+
+.profile-image {
+  margin-top: 1em;
+  display: flex;
+  align-items: center;
+}
+
+.author-posts {
+  max-height: 30%;
+}
+
+.post-title {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+#single-post {
+  max-width: 50%;
+  max-height: 50%;
 }
 
 #h2-email-edit {
