@@ -6,7 +6,15 @@ const routeGuard = require('./../middleware/route-guard');
 const Post = require('./../models/post');
 
 router.get('/', (req, res, next) => {
-  Post.find()
+  const selectedCategory = req.query.category;
+  let searchQuery = {};
+  if (selectedCategory === 'General' || !selectedCategory) {
+    searchQuery = {};
+  } else {
+    searchQuery = { category: selectedCategory };
+  }
+  //console.log(searchQuery);
+  Post.find(searchQuery)
     .sort({ createdAt: -1 })
     .populate('author')
     .then(posts => {

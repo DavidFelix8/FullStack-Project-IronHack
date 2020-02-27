@@ -1,15 +1,13 @@
 <!--<h1>Main Page</h1>-->
-<form action="" method="GET">
-  <aside>
-    <ul id="myUL">
-    <h2>Categories</h2>
-      <li><a href="#">CSS</a></li>
-      <li><a href="#">General</a></li>
-      <li><a href="#">HTML</a></li>
-      <li><a href="#">JavaScript</a></li>
-    </ul>
+  <aside id ="myUL">
+    <h2>Categories</h2>  
+    <form action="" method="GET">
+      <button type="submit" name="category" value="CSS">CSS</button>
+      <button type="submit" name="category" value="HTML">HTML</button>
+      <button type="submit" name="category" value="JavaScript">JavaSript</button>
+      <button type="submit" name="category" value="General">General</button>
+    </form>    
   </aside>
-</form>
 
 {{#each posts}}
 
