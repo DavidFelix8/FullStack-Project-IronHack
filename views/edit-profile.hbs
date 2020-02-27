@@ -1,6 +1,6 @@
 <div class="edit-profile">
     <form action="/profile/{{user._id}}/edit" method="POST" enctype="multipart/form-data">    
-        <label for="input-Photo">Photo</label>
+        <label for="input-Photo" >Photo</label>
         <input type="file" name="photo" id="input-Photo" accept="image/*" />
          <div class="form-group">
             <label for="inputUser">Name</label>
@@ -8,7 +8,7 @@
         </div>
         <div class="form-group">
             <label for="inputEmail">Email</label>
-            <input name="email" type="email" value={{user.email}} class="form-control" id="inputEmail" placeholder="Enter Your Email" required>
+            <h2 id="h2-email-edit">{{user.email}}</h2>
         </div>       
         <button type="submit" class="btn btn-primary">Save Changes</button>
     </form>     
