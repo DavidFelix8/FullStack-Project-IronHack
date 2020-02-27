@@ -3,18 +3,24 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Open Sans'; }
+<<<<<<< HEAD
 
 button:focus {
   outline: 0; }
+=======
+>>>>>>> 7db2dbb39f70cbce653aa332eded1f918a426303
 
 body {
   background-color: rgba(230, 226, 235, 0.5); }
 
 nav {
   text-decoration: none; }
+<<<<<<< HEAD
 
 .navbar {
   box-shadow: 0 2rem 4rem -1rem rgba(250, 123, 123, 0.685); }
+=======
+>>>>>>> 7db2dbb39f70cbce653aa332eded1f918a426303
 
 nav a {
   color: White;
@@ -23,6 +29,7 @@ nav a {
 
 a {
   color: black; }
+<<<<<<< HEAD
 
 .fourLolz-logo {
   width: 30%;
@@ -32,6 +39,8 @@ a {
   display: inline-flex;
   justify-content: space-between;
   align-items: flex-start; }
+=======
+>>>>>>> 7db2dbb39f70cbce653aa332eded1f918a426303
 
 .auth-icon {
   margin-right: 0.3rem; }
@@ -68,6 +77,10 @@ a {
 
 .author-div-posts {
   width: 90%;
+<<<<<<< HEAD
+=======
+  height: 80%;
+>>>>>>> 7db2dbb39f70cbce653aa332eded1f918a426303
   margin: 4rem auto; }
 
 .post-title {
@@ -163,5 +176,13 @@ a {
 #single-post img {
   display: flex;
   align-items: center; }
+<<<<<<< HEAD
+=======
+
+.horizontalLineBetweenPosts {
+  display: flex;
+  align-items: center;
+  width: 60%; }
+>>>>>>> 7db2dbb39f70cbce653aa332eded1f918a426303
 
 /*# sourceMappingURL=style.css.map */
