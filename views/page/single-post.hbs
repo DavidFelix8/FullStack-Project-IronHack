@@ -4,9 +4,9 @@
   <h3 class="w-75 m-auto">{{postInfo.author.name}}</h3>
   <h5 class="w-75 m-auto">Category: {{postInfo.category}}</h5>
    <form action="/post/{{postInfo._id}}/like" method="POST">
-    <button class="">Like</button>
+    <button class="button-like"><img src="/images/blueLike.png" alt=""></button>
   </form>
-  <h2>Likes: {{numLikes}}</h2>
+  <h2 class="font-likes">Likes: {{numLikes}}</h2>
 </article>
 
 

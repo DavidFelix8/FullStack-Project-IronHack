@@ -15,11 +15,7 @@
 {{#each editedPosts}}
 
 {{>post}}
-   <form action="/post/{{postInfo._id}}/like" method="POST">
-    <button class="">Like</button>
-  </form>
-  <h2>Likes: {{numLikes}}</h2>
-
+   
 {{/each}}
 
 <button onclick="topFunction()" class="buttontop" title="Go to top"><i class="fas fa-angle-up fa-2x ArrowUpTop"></i></button>            

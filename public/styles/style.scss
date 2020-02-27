@@ -193,6 +193,19 @@ a {
   }
 }
 
+.button-like {
+  border: none;
+}
+
+.button-like img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.font-likes {
+  font-size: 1.5rem;
+}
+
 .buttontop {
   position: fixed;
   border: none;
@@ -203,13 +216,6 @@ a {
   right: 3%;
   z-index: 2;
 }
-
-//Facebook Share
-/* .share-fb {
-  background-image: url('/images/share-fb.jpg');
-  background-position: center;
-  background-size: cover;
-} */
 
 .post a {
   text-decoration: none;
@@ -224,4 +230,5 @@ a {
   display: flex;
   align-items: center;
   width: 60%;
+  margin: 0 auto;
 }
