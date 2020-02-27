@@ -15,34 +15,13 @@ a {
   color: black;
   text-decoration: none; }
 
-#myInput {
-  margin-left: 4rem; }
-
-#myUL {
-  /* Remove default list styling */
-  list-style-type: none;
-  position: fixed;
-  margin-top: 2rem;
-  margin: 2rem 2rem; }
-
-#myUL li a {
-  margin-top: 1rem;
-  background-color: #f6f6f6;
-  padding: 0.5rem;
-  text-decoration: none;
-  font-size: 1.2rem;
-  color: black;
-  display: block; }
-
-#myUL li a:hover:not(.header) {
-  background-color: #eee;
-  /* Add a hover effect to all links, except for headers */ }
-
 .sign-in-auth {
-  margin: 10rem; }
+  margin: 10rem;
+  text-decoration: none; }
 
 .sign-up-auth {
-  margin: 10rem; }
+  margin: 10rem;
+  text-decoration: none; }
 
 .edit-profile {
   margin: 10rem; }
@@ -54,5 +33,39 @@ a {
   background-color: white;
   border-radius: 0.2rem;
   border: 0.1rem solid #ced4da; }
+
+#myInput {
+  margin-left: 4rem; }
+
+#myUL {
+  visibility: hidden; }
+
+@media only screen and (min-width: 992px) {
+  #myUL {
+    visibility: visible;
+    position: fixed;
+    margin-top: 2rem;
+    margin: 2rem 2rem; }
+  #myUL button {
+    margin-top: 1rem;
+    background-color: #f6f6f6;
+    padding: 0.5rem;
+    outline: none;
+    border: none; }
+  #myUL button:hover {
+    background-color: #eee; }
+  /*  #myUL li a {
+    margin-top: 1rem;
+    background-color: #f6f6f6;
+    padding: 0.5rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: black;
+    display: block;
+  }
+
+  #myUL li a:hover:not(.header) {
+    background-color: #eee;
+  } */ }
 
 /*# sourceMappingURL=style.css.map */
