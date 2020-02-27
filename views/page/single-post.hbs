@@ -12,12 +12,14 @@
   {{#if ownProfile}}
 
   <div class="fb-share-button" data-href="https://www.facebook.com/sharer/sharer.php?{{postInfo._id}}" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Partilhar</a></div>
-
-  <form action="/post/{{postInfo._id}}/delete" method="POST">
+  <div class="btn-edit-delete">
+    <form action="/post/{{postInfo._id}}/delete" method="POST">
     <button class="">Delete</button>
   </form>
   
-    <button class=""><a href = "/post/{{postInfo._id}}/edit">Edit Post</a></button>
+    <button class="btn-edit-post"><a href = "/post/{{postInfo._id}}/edit">Edit Post</a></button>
+    </div>
+  
   {{/if}}
 <footer class="d-flex justify-content-center align-items-md-center flex-column">  
   {{#if user}}

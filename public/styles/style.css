@@ -26,9 +26,14 @@ a {
   text-decoration: none; }
 
 .fourLolz-logo {
+<<<<<<< HEAD
   width: 6rem;
   height: 3rem;
   margin-left: 2.5rem; }
+=======
+  width: 7%;
+  height: 7%; }
+>>>>>>> 72cf18fc773107e4b95e73f5565926c77bc8fbcd
 
 #post-author-share-fb {
   display: inline-flex;
@@ -200,5 +205,23 @@ a {
   align-items: center;
   width: 60%;
   margin: 0 auto; }
+
+.feed-1stpage a {
+  text-decoration: none; }
+
+.navbar a {
+  text-decoration: none; }
+
+.btn-edit-delete {
+  display: flex;
+  margin-top: 1em;
+  justify-content: space-evenly;
+  margin-left: 5rem; }
+
+.fb-share-button {
+  margin-left: 5rem; }
+
+.btn-edit-post a {
+  text-decoration: none; }
 
 /*# sourceMappingURL=style.css.map */
