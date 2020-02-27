@@ -187,3 +187,12 @@ a {
   background-position: center;
   background-size: cover;
 } */
+
+.post a {
+  text-decoration: none;
+}
+
+#single-post img {
+  display: flex;
+  align-items: center;
+}

@@ -2,67 +2,83 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Open Sans'; }
+  font-family: 'Open Sans';
+}
 
 body {
-  background-color: rgba(230, 226, 235, 0.5); }
+  background-color: rgba(230, 226, 235, 0.5);
+}
 
 nav {
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 nav a {
   color: White;
   margin-right: 1em;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 a {
-  color: black; }
+  color: black;
+}
 
 .auth-icon {
-  margin-right: 0.3rem; }
+  margin-right: 0.3rem;
+}
 
 .sign-in-auth {
   margin: 10rem;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 .sign-up-auth {
   margin: 10rem;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 .edit-profile {
   display: flex;
   justify-content: center;
-  margin-top: 1em; }
+  margin-top: 1em;
+}
 
 .own-profile {
   width: 90%;
   margin: 0 auto;
-  margin-top: 3rem; }
+  margin-top: 3rem;
+}
 
 .own-profile button {
-  margin-top: 1em; }
+  margin-top: 1em;
+}
 
 .author-profile {
   display: flex;
-  margin-left: 3em; }
+  margin-left: 3em;
+}
 
 .profile-image {
   margin-top: 1em;
   display: flex;
-  align-items: center; }
+  align-items: center;
+}
 
 .author-posts {
   width: 90%;
   height: 80%;
-  margin: 4rem auto; }
+  margin: 4rem auto;
+}
 
 .post-title {
   margin-top: 1em;
-  margin-bottom: 1em; }
+  margin-bottom: 1em;
+}
 
 #single-post {
   max-width: 50%;
-  max-height: 50%; }
+  max-height: 50%;
+}
 
 #h2-email-edit {
   color: black;
@@ -70,63 +86,80 @@ a {
   font-size: 1.3rem;
   background-color: white;
   border-radius: 0.2rem;
-  border: 0.1rem solid #ced4da; }
+  border: 0.1rem solid #ced4da;
+}
 
 .button-lang-img-css {
   float: left;
   width: 1.8rem;
-  height: 1.5rem; }
+  height: 1.5rem;
+}
 
 .button-lang-img-html {
   float: left;
   width: 1.8rem;
-  height: 1.5rem; }
+  height: 1.5rem;
+}
 
 .button-lang-img-js {
   float: left;
   width: 1.5rem;
-  height: 1.3rem; }
+  height: 1.3rem;
+}
 
 #myInput {
-  margin-left: 4rem; }
+  margin-left: 4rem;
+}
 
 #myUL {
-  visibility: hidden; }
+  visibility: hidden;
+}
 
 #myULToggler {
-  visibility: visible; }
+  visibility: visible;
+}
 
 #myULToggler button {
   color: white;
   width: 100%;
   outline: none;
   border: none;
-  background-color: transparent; }
+  background-color: transparent;
+}
 
 @media only screen and (max-width: 992px) {
   .post {
-    margin-top: -5rem; }
+    margin-top: -5rem;
+  }
   .postfa {
-    margin-top: 8rem; } }
+    margin-top: 8rem;
+  }
+}
 
 @media only screen and (min-width: 992px) {
   .navbar {
-    max-height: 10vh; }
+    max-height: 10vh;
+  }
   #myUL {
     visibility: visible;
     position: fixed;
     margin-top: 2rem;
-    margin: 2rem 2rem; }
+    margin: 2rem 2rem;
+  }
   #myUL button {
     margin-top: 1rem;
     background-color: #f6f6f6;
     padding: 0.5rem;
     outline: none;
-    border: none; }
+    border: none;
+  }
   #myUL button:hover {
-    background-color: #eee; }
+    background-color: #eee;
+  }
   #myULToggler {
-    visibility: hidden; } }
+    visibility: hidden;
+  }
+}
 
 .buttontop {
   position: fixed;
@@ -136,12 +169,22 @@ a {
   background-color: azure;
   bottom: 20px;
   right: 3%;
-  z-index: 2; }
+  z-index: 2;
+}
 
 /* .share-fb {
   background-image: url('/images/share-fb.jpg');
   background-position: center;
   background-size: cover;
 } */
+
+.post a {
+  text-decoration: none;
+}
+
+#single-post img {
+  display: flex;
+  align-items: center;
+}
 
 /*# sourceMappingURL=style.css.map */
