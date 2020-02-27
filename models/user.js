@@ -7,13 +7,12 @@ const schema = new mongoose.Schema({
   name: {
     type: String,
     trim: true,
-    unique: true,
     minlength: 3,
     maxlength: 20
   },
   email: {
     type: String,
-    // required: true, added it on form sign in
+    required: true,
     lowercase: true,
     trim: true,
     unique: true

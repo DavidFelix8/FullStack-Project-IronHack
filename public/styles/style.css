@@ -47,4 +47,12 @@ a {
 .edit-profile {
   margin: 10rem; }
 
+#h2-email-edit {
+  color: black;
+  padding: 0.3rem;
+  font-size: 1.3rem;
+  background-color: white;
+  border-radius: 0.2rem;
+  border: 0.1rem solid #ced4da; }
+
 /*# sourceMappingURL=style.css.map */
