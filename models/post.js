@@ -20,7 +20,7 @@ const schema = new mongoose.Schema(
     },
     category: {
       type: String,
-      enum: ['CSS', 'HTML', 'JavaScript', 'General']
+      enum: ['CSS', 'HTML', 'JavaScript', 'General', 'React', 'Phyton', 'C++']
     }
   },
   {
