@@ -1,10 +1,17 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
-    
   </button>
   <a class="navbar-brand ml-4" href="/">4Lolz</a>
-  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">       
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">  
+    <aside id ="myULToggler">
+    <form class="d-flex flex-column" action="" method="GET">
+      <button type="submit" name="category" value="CSS">CSS</button>
+      <button type="submit" name="category" value="HTML">HTML</button>
+      <button type="submit" name="category" value="JavaScript">JavaSript</button>
+      <button type="submit" name="category" value="General">General</button>
+    </form>    
+  </aside>
   </div>    
 {{#if user}}
   <a href="/post/create">Upload</a>
