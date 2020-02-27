@@ -1,0 +1,7 @@
+<h2>Edit Post</h2>
+
+<form action="/post/{{ data._id }}/edit" method="POST">
+    <label for="input-title">Post Title</label>
+    <input type="text" name="title" id="input-title" maxlength="80" value= "{{data.title}}"/>
+    <button>Save Changes</button>
+</form> 

@@ -5,22 +5,31 @@ const router = new Router();
 
 const User = require('./../models/user');
 const Post = require('./../models/post');
-
+const uploader = require('../middleware/upload-photo');
 const routeGuard = require('./../middleware/route-guard');
 
-router.get('/edit', routeGuard(true), (req, res, next) => {
-  res.render('edit-profile');
+//Profile Edit Photo
+router.get('/:userId/edit', routeGuard(true), (req, res, next) => {
+  const { userId } = req.params;
+
+  User.findById(userId).then(user => {
+    res.render('edit-profile', user);
+  });
 });
 
-router.post('/edit/:id', routeGuard(true), (req, res, next) => {
-  const userId = req.params.id;
+router.post('/:userId/edit', routeGuard(true), uploader.single('photo'), (req, res, next) => {
+  const userId = req.params.userId;
+  const url = req.file.url;
+
   const { name, email } = req.body;
 
   User.findByIdAndUpdate(userId, {
     name,
-    email
+    email,
+    photo: url
   })
-    .then(() => {
+    .then(data => {
+      //console.log('new', data);
       res.redirect('/');
     })
     .catch(error => {

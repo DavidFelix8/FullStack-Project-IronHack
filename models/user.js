@@ -13,7 +13,7 @@ const schema = new mongoose.Schema({
   },
   email: {
     type: String,
-    required: true,
+    // required: true, added it on form sign in
     lowercase: true,
     trim: true,
     unique: true
@@ -24,11 +24,12 @@ const schema = new mongoose.Schema({
     trim: true
   },
   photo: {
-    type: String
+    type: String,
+    default: '/images/no-pic.png'
   },
   passwordHash: {
     type: String
-    //required: true
+    // required: true
   },
   googleId: {
     type: String

@@ -9,6 +9,8 @@
   <form action="/post/{{postInfo._id}}/delete" method="POST">
     <button class="">Delete</button>
   </form>
+  
+    <button class=""><a href = "/post/{{postInfo._id}}/edit">Edit Post</a></button>
   {{/if}}
 <footer class="d-flex justify-content-center align-items-md-center flex-column">  
   {{#if user}}

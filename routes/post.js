@@ -93,6 +93,34 @@ router.get('/:postId', (req, res, next) => {
     .catch(error => next(error));
 });
 
+router.get('/:postId/edit', (req, res, next) => {
+  const { postId } = req.params;
+  Post.findById(postId)
+    .then(data => {
+      console.log('data for edit', data);
+      res.render(`page/edit-post`, { data });
+    })
+    .catch(error => {
+      next(error);
+    });
+});
+
+router.post('/:postid/edit', (req, res, next) => {
+  console.log('i am at the post request');
+  const postId = req.params.postid;
+  const newtitle = req.body.title;
+  Post.findByIdAndUpdate(postId, {
+    title: newtitle
+  })
+    .then(update => {
+      console.log('i am at the update', update);
+      res.redirect(`/post/${postId}`);
+    })
+    .catch(error => {
+      next(error);
+    });
+});
+
 //Comments
 router.post('/:postId/comment', routeGuard(true), (req, res, next) => {
   const { postId } = req.params;
