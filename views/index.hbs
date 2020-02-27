@@ -12,11 +12,13 @@
     </form>    
   </aside>
 
-{{#each posts}}
+{{#each editedPosts}}
 
 {{>post}}
-  
-
+   <form action="/post/{{postInfo._id}}/like" method="POST">
+    <button class="">Like</button>
+  </form>
+  <h2>Likes: {{numLikes}}</h2>
 
 {{/each}}
 

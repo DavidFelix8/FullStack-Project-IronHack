@@ -3,6 +3,10 @@
   <img class="w-75 h-75" src="{{postInfo.photo}}" alt="Image-Post">
   <h3 class="w-75 m-auto">{{postInfo.author.name}}</h3>
   <h5 class="w-75 m-auto">Category: {{postInfo.category}}</h5>
+   <form action="/post/{{postInfo._id}}/like" method="POST">
+    <button class="">Like</button>
+  </form>
+  <h2>Likes: {{numLikes}}</h2>
 </article>
 
 
