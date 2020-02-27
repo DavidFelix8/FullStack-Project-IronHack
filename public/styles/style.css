@@ -13,12 +13,10 @@ nav {
 
 nav a {
   color: White;
-  text-decoration: none;
   margin-right: 1em; }
 
 a {
-  color: black;
-  text-decoration: none; }
+  color: black; }
 
 .sign-in-auth {
   margin: 10rem;
@@ -50,7 +48,7 @@ a {
   align-items: center; }
 
 .author-posts {
-  max-height: 30%; }
+  height: 80%; }
 
 .post-title {
   margin-top: 1em;

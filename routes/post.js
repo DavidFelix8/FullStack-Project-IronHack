@@ -6,27 +6,10 @@ const Post = require('./../models/post');
 const Comment = require('./../models/comment');
 const routeGuard = require('../middleware/route-guard');
 
-// cRud - Get all the posts. http://localhost:3000/post
-
-//TODO: TALK ABOUT THIS WITH THE GROUP-THIS IS ALREADY BEEN DONE IN THE INDEX ROUTER
-// router.get('/', (req, res, next) => {
-//   Post.find()
-//     // .limit(10)
-//     .then(posts => {
-//       console.log('POSTS', posts);
-//       res.render('index', { posts });
-//     })
-//     .catch(error => {
-//       next(error);
-//     });
-// });
-
-// Crud - Get all the posts. http://localhost:3000/post/create
 router.get('/create', routeGuard(true), (req, res, next) => {
   res.render('page/create-post');
 });
 
-// Crud - Get all the posts. http://localhost:3000/post/create
 const uploader = require('../multer-configure.js');
 
 router.post('/create', routeGuard(true), uploader.single('photo'), (req, res, next) => {
@@ -74,11 +57,9 @@ router.get('/:postId', (req, res, next) => {
         ? (ownProfile = true)
         : (ownProfile = false);
       comments.map(comment => {
-        //console.log(comment);
         comment.creation = new Date(comment.createdAt);
       });
       const editedComments = comments.map((val, ind) => {
-        console.log('filtering', user, val.author._id);
         if (val.author._id.toString() == user.toString()) {
           val.canDelete = true;
           return val;
@@ -86,8 +67,6 @@ router.get('/:postId', (req, res, next) => {
           return val;
         }
       });
-
-      console.log('mine', editedComments);
       res.render('page/single-post', { postInfo, editedComments, ownProfile });
     })
     .catch(error => next(error));
@@ -105,14 +84,12 @@ router.get('/:postId/edit', (req, res, next) => {
 });
 
 router.post('/:postid/edit', (req, res, next) => {
-  console.log('i am at the post request');
   const postId = req.params.postid;
   const newtitle = req.body.title;
   Post.findByIdAndUpdate(postId, {
     title: newtitle
   })
     .then(update => {
-      console.log('i am at the update', update);
       res.redirect(`/post/${postId}`);
     })
     .catch(error => {
@@ -141,8 +118,6 @@ router.post('/:postId/:commentId/delete', (req, res, next) => {
   console.log('I am deleting a comment');
   const commentId = req.params.commentId;
   const { postId } = req.params;
-
-  console.log('HREE', commentId);
 
   Comment.findByIdAndDelete(commentId)
     .then(postInfo => {
