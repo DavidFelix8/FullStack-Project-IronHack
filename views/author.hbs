@@ -1,5 +1,6 @@
 <article class ="own-profile">
-<h2>{{author.name}}'s Posts:</h2>
+
+<h6>Profile Picture:</h6>
 
 {{#if isOwnProfile}}
 <picture class="profile-image">
@@ -10,8 +11,13 @@
 </div>
 
 {{/if}}
+
 </article>
+
+ <h4>{{author.name}}'s Posts:</h4>
+
 <div class="author-posts">
+
   {{#each posts}}
 
   {{>post}}
