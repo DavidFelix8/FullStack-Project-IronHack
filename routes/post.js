@@ -5,7 +5,7 @@ const router = new Router();
 const Post = require('./../models/post');
 const Comment = require('./../models/comment');
 const routeGuard = require('../middleware/route-guard');
-
+const Like = require('./../models/like');
 router.get('/create', routeGuard(true), (req, res, next) => {
   res.render('page/create-post');
 });
@@ -67,9 +67,32 @@ router.get('/:postId', (req, res, next) => {
           return val;
         }
       });
-      res.render('page/single-post', { postInfo, editedComments, ownProfile });
+      Like.find({ postId: postId }).then(likes => {
+        const numLikes = likes.length;
+        console.log(likes, numLikes);
+        res.render('page/single-post', { postInfo, editedComments, ownProfile, numLikes });
+      });
     })
     .catch(error => next(error));
+});
+
+//add like
+
+router.post('/:postId/like', (req, res, next) => {
+  console.log('i am here', req.user._id, req.params.postId);
+  const postId = req.params.postId;
+  const user = req.user._id;
+  Like.create({
+    postId,
+    userId: user
+  })
+    .then(data => {
+      console.log(data);
+      res.redirect(`/post/${postId}`);
+    })
+    .catch(error => {
+      next(error);
+    });
 });
 
 router.get('/:postId/edit', (req, res, next) => {
