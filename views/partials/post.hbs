@@ -15,12 +15,15 @@
   <div class="d-flex" style="max-width: 50%;
     margin: 20px auto;
     justify-content: space-between;">
-    <a href="/profile/{{author.id}}"><h5>{{author.name}}</h5></a>
-    <form action="/post/{{postInfo._id}}/like" method="POST">
-    <button class="button-like"><img src="/images/blueLike.png" alt=""></button>
+    <a href="/profile/{{author._id}}"><h5>{{author.name}}</h5></a>
+    <form action="/post/{{_id}}/listlike" method="POST">
+    <button class="button-like"><img src="/images/blueLike.png" alt=""> {{numLikes}}</button>
   </form>
-  <h2 class="font-likes">Likes: {{numLikes}}</h2>
-    <div class="fb-share-button ml-4" data-href="https://www.facebook.com/sharer/sharer.php?u={{photo}}" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Partilhar</a></div>
+
+<a href="https://www.facebook.com/sharer/sharer.php?u=fullstack-froject2-ironhack.herokuapp.com/post/{{_id}}" target="_blank">
+  Share on Facebook
+</a>
+    <div class="fb-share-button ml-4" data-href="https://www.facebook.com/sharer/sharer.php?u=google.com" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Partilhar</a></div>
   </div>
     <hr class="horizontalLineBetweenPosts d-flex justify-content-center align-items-md-center flex-column">
   </div>
