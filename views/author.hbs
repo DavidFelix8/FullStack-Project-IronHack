@@ -1,20 +1,19 @@
 <article class ="own-profile">
 
-
 {{#if isOwnProfile}}
 <h5>Welcome to your profile {{author.name}}</h5>
 <h5>Profile Picture:</h5>
 <picture class="profile-image">
     <img class="ml-5 w-25 h-25" src={{author.photo}} alt="No-pic">
-</picture>
+</picture> 
 <div class="author-profile">
     <button type="submit" class="btn btn-primary"><a href="/profile/{{author._id}}/edit">Edit</a></button>     
 </div>
 
 {{/if}}
-
 </article>
 
+ <h5>Description of the auhtor goes here: "{{author.description}}"</h5>
 
 <section class="author-div-posts">
  <h4>{{author.name}}'s Posts:</h4>
