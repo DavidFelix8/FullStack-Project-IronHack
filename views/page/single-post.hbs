@@ -6,7 +6,9 @@
   <form action="/post/{{postInfo._id}}/like" method="POST">
     <button class="button-like"><img src="/images/blueLike.png" alt=""> {{numLikes}}</button>
   </form>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=fullstack-froject2-ironhack.herokuapp.com/post/{{_id}}" target="_blank"><img class="shareFB-img" src="/images/shareFB.png" alt=""></a>
 </article>
+
 
   {{#if ownProfile}}
 

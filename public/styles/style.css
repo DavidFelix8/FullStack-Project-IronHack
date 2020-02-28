@@ -1,3 +1,317 @@
+<<<<<<< HEAD
 *{margin:0;padding:0;box-sizing:border-box}body{background-color:rgba(255,0,0,0.966);font-family:14px -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, Helvetica, Geneva, sans-serif}button:focus{outline:0}nav{text-decoration:none}nav a{color:White;margin-right:1em;text-decoration:none}a{color:black;text-decoration:none}.create-post-view{justify-content:center;width:50%;border:0.5rem solid black;margin:0 auto;border-radius:1rem;padding:6rem;margin-bottom:3rem}.form-post{display:flex;flex-direction:column;justify-content:space-evenly}.form-post input{margin-bottom:3rem}.p-edit{margin-top:0;margin-bottom:1rem;border:1px solid white;border-radius:4px;background-color:white;padding:3px}.fourLolz-logo{width:6rem;height:3rem;margin-left:2.5rem}#post-author-share-fb{display:inline-flex;justify-content:space-between;align-items:flex-start}.auth-icon{margin-right:0.3rem}.sign-in-auth{margin:10rem;text-decoration:none}.sign-up-auth{margin:10rem;text-decoration:none}.edit-profile{display:flex;justify-content:center;margin-top:1em}.own-profile{width:90%;margin:0 auto;margin-top:3rem}.own-profile button{margin-top:1em}.author-profile{display:flex;margin-left:3em}.profile-image{margin-top:1em;display:flex;align-items:center}.author-div-posts{width:90%;margin:4rem auto}.author-div-posts h1{display:flex;justify-content:center}.sofia{margin:20px auto;display:block !important;width:25%}.sofia .sofia2{display:block}.sofia .sofia2 form{margin:20px 0}.sofia2{max-width:50%;margin:20px auto;justify-content:space-between;display:flex}.post-title{margin-top:1em;margin-bottom:1em}#h2-email-edit{color:black;padding:0.3rem;font-size:1.3rem;background-color:white;border-radius:0.2rem;border:0.1rem solid #ced4da}#myInput{margin-left:4rem}#myULToggler button{color:white;width:100%;outline:none;border:none;background-color:transparent}@media only screen and (max-width: 992px){.post{margin-top:-5rem}.postfa{margin-top:8rem;text-decoration:none}#myUL{display:none;position:fixed;margin-top:2rem;margin:2rem 2rem}#myUL button{margin-top:1rem;background-color:#f6f6f6;padding:0.5rem;outline:none;border:none}.button-lang-img-css{margin-right:4.5rem;width:1.8rem;height:1.5rem}.button-lang-img-html{margin-right:3.6rem;width:1.8rem;height:1.5rem}.button-lang-img-js{margin-right:1.8rem;width:1.5rem;height:1.3rem}.button-lang-img-react{margin-right:3.6rem;width:1.8rem;height:1.5em}.button-lang-img-python{margin-right:3rem;width:1.8rem;height:1.5em}.button-lang-img-cplusplus{margin-right:4.3rem;width:1.8rem;height:1.5em}.button-lang-img-general{margin-right:2.5rem;width:2rem;height:1.5em}}@media only screen and (min-width: 992px){.navbar{max-height:10vh}#myUL{position:fixed;margin-top:2rem;margin:2rem 2rem}#myUL button{margin-top:1rem;background-color:#f6f6f6;padding:0.5rem;outline:none;border:none}#myUL button:hover{background-color:#343a4088 !important;transform:translateY(-7px)}#myULToggler{display:none}.button-lang-img-css{float:left;width:1.8rem;height:1.5rem}.button-lang-img-html{float:left;width:1.8rem;height:1.5rem}.button-lang-img-js{float:left;width:1.5rem;height:1.3rem}.button-lang-img-react{float:left;width:1.8rem;height:1.5em}.button-lang-img-python{float:left;width:1.8rem;height:1.5em}.button-lang-img-cplusplus{float:left;width:1.8rem;height:1.5em}.button-lang-img-general{float:left;width:2rem;height:1.5em}}.button-like{background-color:rgba(230,170,170,0.966);border:none}.button-like img{width:1.5rem;height:1.5rem}.font-likes{font-size:1.5rem}.buttontop{position:fixed;border:none;width:30px;height:30px;background-color:azure;bottom:20px;right:3%;z-index:2}.post a{text-decoration:none}#single-post img{display:flex;align-items:center}.horizontalLineBetweenPosts{display:flex;align-items:center;width:60%;margin:0 auto}.feed-1stpage a{text-decoration:none}.navbar a{text-decoration:none}.btn-edit-delete{display:flex;margin-top:1em;justify-content:space-evenly;margin-left:5rem}.fb-share-button{margin-left:5rem}.btn-edit-post a{text-decoration:none}#image-single-post{max-width:50%;max-height:50%}#edit-post-btn a{text-decoration:none;color:white}.category-h2{color:#000;font:700 32px 'Open Sans';top:0px;margin:0px;padding:5px;text-transform:uppercase;border-bottom:2px solid #888}.shareFB-img{width:8rem;height:2rem}.create-post-view{display:flex;align-items:center;flex-direction:column;margin-top:1em}.h1-create-post{margin-top:1em;margin-left:5rem}.create-post-view br{display:block;margin:10px 0}#eachposts{display:flex;justify-content:space-evenly;max-width:120%;max-height:120%}.description{display:flex;justify-content:center;color:darkgray;width:670px;border:5px solid black;padding:50px;margin:20px}.author-title-name{margin-left:5rem}
+=======
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  background-color: #f0f0f0;
+  font-family: 14px -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, Helvetica, Geneva, sans-serif; }
+
+button:focus {
+  outline: 0; }
+
+nav {
+  text-decoration: none; }
+
+nav a {
+  color: White;
+  margin-right: 1em;
+  text-decoration: none; }
+
+a {
+  color: black;
+  text-decoration: none; }
+
+.fourLolz-logo {
+  width: 6rem;
+  height: 3rem;
+  margin-left: 2.5rem; }
+
+#post-author-share-fb {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: flex-start; }
+
+.auth-icon {
+  margin-right: 0.3rem; }
+
+.sign-in-auth {
+  margin: 10rem;
+  text-decoration: none; }
+
+.sign-up-auth {
+  margin: 10rem;
+  text-decoration: none; }
+
+.edit-profile {
+  display: flex;
+  justify-content: center;
+  margin-top: 1em; }
+
+.own-profile {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 3rem; }
+
+.own-profile button {
+  margin-top: 1em; }
+
+.author-profile {
+  display: flex;
+  margin-left: 3em; }
+
+.profile-image {
+  margin-top: 1em;
+  display: flex;
+  align-items: center; }
+
+.author-div-posts {
+  width: 90%;
+  margin: 4rem auto; }
+
+.author-div-posts h1 {
+  display: flex;
+  justify-content: center; }
+
+.sofia {
+  margin: 20px auto;
+  display: block !important;
+  width: 25%; }
+
+.sofia .sofia2 {
+  display: block; }
+
+.sofia .sofia2 form {
+  margin: 20px 0; }
+
+.sofia2 {
+  max-width: 50%;
+  margin: 20px auto;
+  justify-content: space-between;
+  display: flex; }
+
+.post-title {
+  margin-top: 1em;
+  margin-bottom: 1em; }
+
+#h2-email-edit {
+  color: black;
+  padding: 0.3rem;
+  font-size: 1.3rem;
+  background-color: white;
+  border-radius: 0.2rem;
+  border: 0.1rem solid #ced4da; }
+
+#myInput {
+  margin-left: 4rem; }
+
+#myULToggler button {
+  color: white;
+  width: 100%;
+  outline: none;
+  border: none;
+  background-color: transparent; }
+
+@media only screen and (max-width: 992px) {
+  .post {
+    margin-top: -5rem; }
+  .postfa {
+    margin-top: 8rem;
+    text-decoration: none; }
+  #myUL {
+    display: none;
+    position: fixed;
+    margin-top: 2rem;
+    margin: 2rem 2rem; }
+  #myUL button {
+    margin-top: 1rem;
+    background-color: #f6f6f6;
+    padding: 0.5rem;
+    outline: none;
+    border: none; }
+  .button-lang-img-css {
+    margin-right: 4.5rem;
+    width: 1.8rem;
+    height: 1.5rem; }
+  .button-lang-img-html {
+    margin-right: 3.6rem;
+    width: 1.8rem;
+    height: 1.5rem; }
+  .button-lang-img-js {
+    margin-right: 1.8rem;
+    width: 1.5rem;
+    height: 1.3rem; }
+  .button-lang-img-react {
+    margin-right: 3.6rem;
+    width: 1.8rem;
+    height: 1.5em; }
+  .button-lang-img-python {
+    margin-right: 3rem;
+    width: 1.8rem;
+    height: 1.5em; }
+  .button-lang-img-cplusplus {
+    margin-right: 4.3rem;
+    width: 1.8rem;
+    height: 1.5em; }
+  .button-lang-img-general {
+    margin-right: 2.5rem;
+    width: 2rem;
+    height: 1.5em; } }
+
+@media only screen and (min-width: 992px) {
+  .navbar {
+    max-height: 10vh; }
+  #myUL {
+    position: fixed;
+    margin-top: 2rem;
+    margin: 2rem 2rem; }
+  #myUL button {
+    margin-top: 1rem;
+    background-color: #f6f6f6;
+    padding: 0.5rem;
+    outline: none;
+    border: none; }
+  #myUL button:hover {
+    background-color: #343a4088 !important;
+    transform: translateY(-7px); }
+  #myULToggler {
+    display: none; }
+  .button-lang-img-css {
+    float: left;
+    width: 1.8rem;
+    height: 1.5rem; }
+  .button-lang-img-html {
+    float: left;
+    width: 1.8rem;
+    height: 1.5rem; }
+  .button-lang-img-js {
+    float: left;
+    width: 1.5rem;
+    height: 1.3rem; }
+  .button-lang-img-react {
+    float: left;
+    width: 1.8rem;
+    height: 1.5em; }
+  .button-lang-img-python {
+    float: left;
+    width: 1.8rem;
+    height: 1.5em; }
+  .button-lang-img-cplusplus {
+    float: left;
+    width: 1.8rem;
+    height: 1.5em; }
+  .button-lang-img-general {
+    float: left;
+    width: 2rem;
+    height: 1.5em; } }
+
+.button-like {
+  background-color: #f0f0f0;
+  border: none; }
+
+.button-like img {
+  width: 1.5rem;
+  height: 1.5rem; }
+
+.font-likes {
+  font-size: 1.5rem; }
+
+.buttontop {
+  position: fixed;
+  border: none;
+  width: 30px;
+  height: 30px;
+  background-color: azure;
+  bottom: 20px;
+  right: 3%;
+  z-index: 2; }
+
+.post a {
+  text-decoration: none; }
+
+#single-post img {
+  display: flex;
+  align-items: center; }
+
+.horizontalLineBetweenPosts {
+  display: flex;
+  align-items: center;
+  width: 60%;
+  margin: 0 auto; }
+
+.feed-1stpage a {
+  text-decoration: none; }
+
+.navbar a {
+  text-decoration: none; }
+
+.btn-edit-delete {
+  display: flex;
+  margin-top: 1em;
+  justify-content: space-evenly;
+  margin-left: 5rem; }
+
+.fb-share-button {
+  margin-left: 5rem; }
+
+.btn-edit-post a {
+  text-decoration: none; }
+
+#image-single-post {
+  max-width: 50%;
+  max-height: 50%; }
+
+#edit-post-btn a {
+  text-decoration: none;
+  color: white; }
+
+.category-h2 {
+  color: black;
+  font: 700 32px 'Open Sans';
+  top: 0px;
+  margin: 0px;
+  padding: 5px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #888888; }
+
+.shareFB-img {
+  width: 8rem;
+  height: 2rem; }
+
+.create-post-view {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 1em; }
+
+.h1-create-post {
+  margin-top: 1em;
+  margin-left: 5rem; }
+
+.create-post-view br {
+  display: block;
+  margin: 10px 0; }
+
+#eachposts {
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 120%;
+  max-height: 120%; }
+
+.description {
+  display: flex;
+  justify-content: center;
+  color: darkgray;
+  width: 670px;
+  border: 5px solid black;
+  padding: 50px;
+  margin: 20px; }
+
+.author-title-name {
+  margin-left: 5rem; }
+>>>>>>> ee0e5009c2f41c7a4a96e92d6b83f1295363a3bd
 
 /*# sourceMappingURL=style.css.map */
