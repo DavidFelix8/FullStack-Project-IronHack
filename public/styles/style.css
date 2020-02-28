@@ -4,7 +4,7 @@
   box-sizing: border-box; }
 
 body {
-  background-color: white;
+  background-color: rgba(255, 0, 0, 0.966);
   font-family: 14px -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, Helvetica, Geneva, sans-serif; }
 
 button:focus {
@@ -206,6 +206,7 @@ a {
     height: 1.5em; } }
 
 .button-like {
+  background-color: rgba(230, 170, 170, 0.966);
   border: none; }
 
 .button-like img {
