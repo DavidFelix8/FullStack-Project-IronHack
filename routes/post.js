@@ -96,7 +96,12 @@ router.post('/:postId/like', (req, res, next) => {
 });
 
 router.post('/:postId/listlike', (req, res, next) => {
+  console.log(req.user);
   //console.log('i am here', req.user._id, req.params.postId);
+  /*   if (req.user == undefined) {
+    alert('You are not Logged In');
+    res.redirect(`/authentication/sign-in`);
+  } */
   const postId = req.params.postId;
   const user = req.user._id;
   Like.create({
@@ -108,6 +113,7 @@ router.post('/:postId/listlike', (req, res, next) => {
       res.redirect(`/`);
     })
     .catch(error => {
+      console.log('erroreoreakasdm', error);
       next(error);
     });
 });
