@@ -4,8 +4,8 @@
   box-sizing: border-box; }
 
 body {
-  background-color: white;
-  font-family: 14px -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, Helvetica, Geneva, sans-serif; }
+  background-color: rgba(255, 0, 0, 0.966);
+  font-family: 14px -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, Helvetica, Geneva, sans-serif; }
 
 button:focus {
   outline: 0; }
@@ -69,6 +69,13 @@ a {
   width: 90%;
   margin: 4rem auto; }
 
+<<<<<<< HEAD
+=======
+.author-div-posts h1 {
+  display: flex;
+  justify-content: center; }
+
+>>>>>>> cfe45d8aabfe3642e929be8c2ba5d4d4e1e034fb
 .sofia {
   margin: 20px auto;
   display: block !important;
@@ -202,6 +209,7 @@ a {
     height: 1.5em; } }
 
 .button-like {
+  background-color: rgba(230, 170, 170, 0.966);
   border: none; }
 
 .button-like img {
@@ -272,6 +280,29 @@ a {
 .shareFB-img {
   width: 8rem;
   height: 2rem; }
+<<<<<<< HEAD
+=======
+
+.create-post-view {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 1em; }
+
+.h1-create-post {
+  margin-top: 1em;
+  margin-left: 5rem; }
+
+.create-post-view br {
+  display: block;
+  margin: 10px 0; }
+
+#eachposts {
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 120%;
+  max-height: 120%; }
+>>>>>>> cfe45d8aabfe3642e929be8c2ba5d4d4e1e034fb
 
 .description {
   display: flex;
