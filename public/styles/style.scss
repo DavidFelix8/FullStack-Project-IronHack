@@ -92,8 +92,26 @@ a {
   margin: 4rem auto;
 }
 
-/* .author-posts {
-} */
+.sofia {
+  margin: 20px auto;
+  display: block !important;
+  width: 25%;
+}
+
+.sofia .sofia2 {
+  display: block;
+}
+
+.sofia .sofia2 form {
+  margin: 20px 0;
+}
+
+.sofia2 {
+  max-width: 50%;
+  margin: 20px auto;
+  justify-content: space-between;
+  display: flex;
+}
 
 .post-title {
   margin-top: 1em;
