@@ -127,21 +127,21 @@ a {
   display: flex;
   justify-content: center;
 }
-.sofia {
+.author-partial-post {
   margin: 20px auto;
   display: block !important;
   width: 25%;
 }
 
-.sofia .sofia2 {
+.author-partial-post .post-underpic {
   display: block;
 }
 
-.sofia .sofia2 form {
+.author-partial-post .post-underpic form {
   margin: 20px 0;
 }
 
-.sofia2 {
+.post-underpic {
   max-width: 50%;
   margin: 20px auto;
   justify-content: space-between;
