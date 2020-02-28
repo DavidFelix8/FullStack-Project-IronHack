@@ -117,60 +117,9 @@ a {
   border: 0.1rem solid rgb(206, 212, 218);
 }
 
-//Button Images Index.hbs
-.button-lang-img-css {
-  float: left;
-  width: 1.8rem;
-  height: 1.5rem;
-}
-
-.button-lang-img-html {
-  float: left;
-  width: 1.8rem;
-  height: 1.5rem;
-}
-
-.button-lang-img-js {
-  float: left;
-  width: 1.5rem;
-  height: 1.3rem;
-}
-
-.button-lang-img-react {
-  float: left;
-  width: 1.8rem;
-  height: 1.5em;
-}
-
-.button-lang-img-python {
-  float: left;
-  width: 1.8rem;
-  height: 1.5em;
-}
-
-.button-lang-img-cplusplus {
-  float: left;
-  width: 1.8rem;
-  height: 1.5em;
-}
-
-.button-lang-img-general {
-  float: left;
-  width: 2rem;
-  height: 1.5em;
-}
-
 //Search List Index.hbs
 #myInput {
   margin-left: 4rem;
-}
-
-#myUL {
-  visibility: hidden;
-}
-
-#myULToggler {
-  visibility: visible;
 }
 
 #myULToggler button {
@@ -185,19 +134,14 @@ a {
   .post {
     margin-top: -5rem;
   }
-}
-.postfa {
-  margin-top: 8rem;
-  text-decoration: none;
-}
 
-@media only screen and (min-width: 992px) {
-  .navbar {
-    max-height: 10vh;
+  .postfa {
+    margin-top: 8rem;
+    text-decoration: none;
   }
 
   #myUL {
-    visibility: visible;
+    display: none;
     position: fixed;
     margin-top: 2rem;
     margin: 2rem 2rem;
@@ -210,13 +154,118 @@ a {
     outline: none;
     border: none;
   }
+  //Button Images Index.hbs
+  .button-lang-img-css {
+    margin-right: 4.5rem;
+    width: 1.8rem;
+    height: 1.5rem;
+  }
 
+  .button-lang-img-html {
+    margin-right: 3.6rem;
+    width: 1.8rem;
+    height: 1.5rem;
+  }
+
+  .button-lang-img-js {
+    margin-right: 1.8rem;
+    width: 1.5rem;
+    height: 1.3rem;
+  }
+
+  .button-lang-img-react {
+    margin-right: 3.6rem;
+    width: 1.8rem;
+    height: 1.5em;
+  }
+
+  .button-lang-img-python {
+    margin-right: 3rem;
+    width: 1.8rem;
+    height: 1.5em;
+  }
+
+  .button-lang-img-cplusplus {
+    margin-right: 4.3rem;
+    width: 1.8rem;
+    height: 1.5em;
+  }
+
+  .button-lang-img-general {
+    margin-right: 2.5rem;
+    width: 2rem;
+    height: 1.5em;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .navbar {
+    max-height: 10vh;
+  }
+
+  #myUL {
+    // visibility: visible;
+    position: fixed;
+    margin-top: 2rem;
+    margin: 2rem 2rem;
+  }
+
+  #myUL button {
+    margin-top: 1rem;
+    background-color: #f6f6f6;
+    padding: 0.5rem;
+    outline: none;
+    border: none;
+  }
   #myUL button:hover {
     background-color: #eee;
   }
 
   #myULToggler {
-    visibility: hidden;
+    display: none;
+  }
+
+  //Button Images Index.hbs
+  .button-lang-img-css {
+    float: left;
+    width: 1.8rem;
+    height: 1.5rem;
+  }
+
+  .button-lang-img-html {
+    float: left;
+    width: 1.8rem;
+    height: 1.5rem;
+  }
+
+  .button-lang-img-js {
+    float: left;
+    width: 1.5rem;
+    height: 1.3rem;
+  }
+
+  .button-lang-img-react {
+    float: left;
+    width: 1.8rem;
+    height: 1.5em;
+  }
+
+  .button-lang-img-python {
+    float: left;
+    width: 1.8rem;
+    height: 1.5em;
+  }
+
+  .button-lang-img-cplusplus {
+    float: left;
+    width: 1.8rem;
+    height: 1.5em;
+  }
+
+  .button-lang-img-general {
+    float: left;
+    width: 2rem;
+    height: 1.5em;
   }
 }
 

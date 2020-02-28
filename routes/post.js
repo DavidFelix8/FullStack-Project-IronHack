@@ -69,7 +69,7 @@ router.get('/:postId', (req, res, next) => {
       });
       Like.find({ postId: postId }).then(likes => {
         const numLikes = likes.length;
-        console.log(likes, numLikes);
+        //console.log(likes, numLikes);
         res.render('page/single-post', { postInfo, editedComments, ownProfile, numLikes });
       });
     })
@@ -79,7 +79,7 @@ router.get('/:postId', (req, res, next) => {
 //add like
 
 router.post('/:postId/like', (req, res, next) => {
-  console.log('i am here', req.user._id, req.params.postId);
+  //console.log('i am here', req.user._id, req.params.postId);
   const postId = req.params.postId;
   const user = req.user._id;
   Like.create({
@@ -87,7 +87,7 @@ router.post('/:postId/like', (req, res, next) => {
     userId: user
   })
     .then(data => {
-      console.log(data);
+      //console.log(data);
       res.redirect(`/post/${postId}`);
     })
     .catch(error => {
@@ -96,7 +96,7 @@ router.post('/:postId/like', (req, res, next) => {
 });
 
 router.post('/:postId/listlike', (req, res, next) => {
-  console.log('i am here', req.user._id, req.params.postId);
+  //console.log('i am here', req.user._id, req.params.postId);
   const postId = req.params.postId;
   const user = req.user._id;
   Like.create({
@@ -104,7 +104,7 @@ router.post('/:postId/listlike', (req, res, next) => {
     userId: user
   })
     .then(data => {
-      console.log(data);
+      //console.log(data);
       res.redirect(`/`);
     })
     .catch(error => {
@@ -161,7 +161,7 @@ router.post('/:postId/:commentId/delete', (req, res, next) => {
 
   Comment.findByIdAndDelete(commentId)
     .then(postInfo => {
-      console.log('Remove Comment', postInfo);
+      //console.log('Remove Comment', postInfo);
       res.redirect(`/post/${postId}`);
     })
     .catch(error => {
@@ -174,7 +174,7 @@ router.post('/:postId/delete', (req, res, next) => {
 
   Post.findByIdAndDelete(postId)
     .then(postInfo => {
-      console.log('Remove Post', postInfo);
+      //console.log('Remove Post', postInfo);
       res.redirect('/');
     })
     .catch(error => {
