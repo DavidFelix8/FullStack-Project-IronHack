@@ -5,16 +5,13 @@
 
 body {
   background-color: rgba(230, 226, 235, 0.5);
-  font-family: 'Open Sans'; }
+  font-family: 14px -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, Helvetica, Geneva, sans-serif; }
 
 button:focus {
   outline: 0; }
 
 nav {
   text-decoration: none; }
-
-.navbar {
-  box-shadow: 0 2rem 4rem -1rem rgba(250, 123, 123, 0.685); }
 
 nav a {
   color: White;
@@ -77,10 +74,6 @@ a {
 .post-title {
   margin-top: 1em;
   margin-bottom: 1em; }
-
-#single-post {
-  max-width: 50%;
-  max-height: 50%; }
 
 #h2-email-edit {
   color: black;
@@ -242,6 +235,23 @@ a {
 
 .btn-edit-post a {
   text-decoration: none; }
+
+#image-single-post {
+  max-width: 50%;
+  max-height: 50%; }
+
+#edit-post-btn a {
+  text-decoration: none;
+  color: white; }
+
+.category-h2 {
+  color: black;
+  font: 700 32px 'Open Sans';
+  top: 0px;
+  margin: 0px;
+  padding: 5px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #888888; }
 
 .shareFB-img {
   width: 8rem;
