@@ -1,15 +1,7 @@
 <!--<h1>Main Page</h1>-->
   <aside id ="myUL">
     <h2>Categories</h2>  
-    <form class="d-flex flex-column" action="" method="GET">
-      <button type="submit" name="category" value="CSS" ><img class="button-lang-img-css" src="/images/css.png" alt="CSS">CSS</button>
-      <button type="submit" name="category" value="HTML"><img class="button-lang-img-html" src="/images/html-5.png" alt="HTML">HTML</button>
-      <button type="submit" name="category" value="JavaScript"><img class="button-lang-img-js" src="/images/java-script.png" alt="JavaScript">JavaScript</button>      
-      <button type="submit" name="category" value="React"><img class="button-lang-img-react" src="/images/react-icon.png" alt="React">React</button>
-      <button type="submit" name="category" value="Phyton"><img class="button-lang-img-python" src="/images/python-icon.png" alt="Python">Phyton</button>
-      <button type="submit" name="category" value="C++"><img class="button-lang-img-cplusplus" src="/images/cplusplusicon.png" alt="C++">C++</button>
-      <button type="submit" name="category" value="General"><img class="button-lang-img-general" src="/images/all-icon.png" alt="General">General</button>
-    </form>    
+    {{>categories}}   
   </aside>
 
 {{#each editedPosts}}

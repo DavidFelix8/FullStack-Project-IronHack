@@ -6,14 +6,8 @@
   
   <div class="collapse navbar-collapse" id="navbarTogglerDemo03">  
     <aside id ="myULToggler">
-    <form class="d-flex flex-column" action="" method="GET">
-      <!--CAN I CHANGE THIS FOR {{INDEX}}-->
-      <button type="submit" name="category" value="CSS">CSS</button>
-      <button type="submit" name="category" value="HTML">HTML</button>
-      <button type="submit" name="category" value="JavaScript">JavaSript</button>
-      <button type="submit" name="category" value="General">General</button>
-    </form>    
-  </aside>
+    {{>categories}}
+    </aside>
   </div>    
 {{#if user}}
   <a href="/post/create">Upload</a>
