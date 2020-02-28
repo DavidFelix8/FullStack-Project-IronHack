@@ -26,14 +26,9 @@ a {
   text-decoration: none; }
 
 .fourLolz-logo {
-<<<<<<< HEAD
   width: 6rem;
   height: 3rem;
   margin-left: 2.5rem; }
-=======
-  width: 7%;
-  height: 7%; }
->>>>>>> 72cf18fc773107e4b95e73f5565926c77bc8fbcd
 
 #post-author-share-fb {
   display: inline-flex;
@@ -223,5 +218,9 @@ a {
 
 .btn-edit-post a {
   text-decoration: none; }
+
+.shareFB-img {
+  width: 8rem;
+  height: 2rem; }
 
 /*# sourceMappingURL=style.css.map */
