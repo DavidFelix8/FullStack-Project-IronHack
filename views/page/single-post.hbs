@@ -3,13 +3,8 @@
   <img class="w-75 h-75" src="{{postInfo.photo}}" alt="Image-Post">
   <h3 class="w-75 m-auto">{{postInfo.author.name}}</h3>
   <h5 class="w-75 m-auto">Category: {{postInfo.category}}</h5>
-<<<<<<< HEAD
-   <form action="/post/{{postInfo._id}}/like" method="POST">
-    <button class=""><img src="" alt="like logo"></button>
-=======
-  <form action="/post/{{_id}}/listlike" method="POST">
+  <form action="/post/{{postInfo._id}}/like" method="POST">
     <button class="button-like"><img src="/images/blueLike.png" alt=""> {{numLikes}}</button>
->>>>>>> 0d8bd9c568500c472c8bbbe4f49a4eb8af18947f
   </form>
 </article>
 
