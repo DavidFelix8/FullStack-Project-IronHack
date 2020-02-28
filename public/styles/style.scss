@@ -29,6 +29,37 @@ a {
   text-decoration: none;
 }
 
+//create-post.hbs form
+.create-post-view {
+  justify-content: center;
+  width: 50%;
+  border: 0.5rem solid black;
+  margin: 0 auto;
+  border-radius: 1rem;
+  padding: 6rem;
+  margin-bottom: 3rem;
+}
+
+.form-post {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.form-post input {
+  margin-bottom: 3rem;
+}
+
+//Edit-profile.hbs
+.p-edit {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  border: 1px solid white;
+  border-radius: 4px;
+  background-color: white;
+  padding: 3px;
+}
+
 //4lolz img
 .fourLolz-logo {
   width: 6rem;

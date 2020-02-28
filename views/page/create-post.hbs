@@ -1,12 +1,10 @@
 <h1 class="h1-create-post">Create a New Post</h1>
 <div class="create-post-view">
-  <form method="POST" enctype="multipart/form-data">
+  <form class="form-post" method="POST" enctype="multipart/form-data">
   <label for="input-title">Post Title</label>
   <input type="text" name="title" id="input-title" placeholder="Input Title" maxlength="80"/>
-  <br class="create-post-buttons">
   <label for="input-photo">Photo</label>
   <input type="file" name="photo" id="input-photo" accept="image/*"/>
-  <br class="create-post-buttons">
   <select name="category" id="category">
     <option value="CSS">CSS</option>
     <option value="HTML">HTML</option>
@@ -16,7 +14,6 @@
     <option value="C++">C++</option>
     <option value="General">General</option>
   </select>
-  <br class="create-post-buttons">
-  <button class="btn btn-primary">Create Post</button>
+  <button class="btn btn-primary mt-5">Create Post</button>
 </form>
 </div>

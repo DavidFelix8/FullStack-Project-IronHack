@@ -1,5 +1,5 @@
-<div class="edit-profile">
-    <form action="/profile/{{user._id}}/edit" method="POST" enctype="multipart/form-data">    
+<div class="edit-profile create-post-view">
+    <form class="form-post" action="/profile/{{user._id}}/edit" method="POST" enctype="multipart/form-data">    
         <label for="input-Photo" >Photo</label>
         <input type="file" name="photo" id="input-Photo" accept="image/*" />
          <div class="form-group">
@@ -8,11 +8,11 @@
         </div>
         <div class="form-group">
             <label for="inputEmail">Email</label>
-            <textarea name="email" id="inputEmail" >{{user.email}}</textarea>
-        </div>   
-        <div>
-             <textarea name="description" id="input-description" placeholder="Describe yourself" maxlength="200">{{user.description}}</textarea>
-        </div>    
+            <p class="p-edit">{{user.email}}</p>
+        </div>          
+            <label for="input-description">Description</label>
+            <textarea name="description" id="input-description" placeholder="Describe yourself" maxlength="200" rows="4" cols="50">{{user.description}}</textarea>
+            <br>  
         <button type="submit" class="btn btn-primary">Save Changes</button>
     </form>     
 </div>
