@@ -210,7 +210,8 @@ a {
     border: none;
   }
   #myUL button:hover {
-    background-color: #eee;
+    background-color: #343a4088 !important;
+    transform: translateY(-7px);
   }
 
   #myULToggler {
