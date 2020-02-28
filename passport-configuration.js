@@ -79,7 +79,8 @@ passport.use(
     {
       clientID: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-      callbackURL: 'https://fullstack-froject2-ironhack.herokuapp.com/'
+      callbackURL:
+        'https://fullstack-froject2-ironhack.herokuapp.com/authentication/google-callback'
     },
     (accessToken, refreshToken, profile, callback) => {
       console.log(profile);

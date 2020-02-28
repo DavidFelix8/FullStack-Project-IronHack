@@ -1,18 +1,20 @@
-<article id="single-post" class="single-post d-flex justify-content-center align-items-md-center flex-column">
+<article id="single-post" class="single-post single-post-responsive d-flex justify-content-center align-items-md-center flex-column">
   <h1 class ="post-title">{{ postInfo.title }}</h1>
   <img id="image-single-post" class="w-75 h-75" src="{{postInfo.photo}}" alt="Image-Post">
+<div class="post-underpic">
   <h3 class="w-75 m-auto">{{postInfo.author.name}}</h3>
   <h5 class="w-75 m-auto"><small>{{postInfo.category}}</small></h5>
   <form action="/post/{{postInfo._id}}/like" method="POST">
     <button class="button-like"><img src="/images/blueLike.png" alt=""> {{numLikes}}</button>
   </form>
   <a href="https://www.facebook.com/sharer/sharer.php?u=fullstack-froject2-ironhack.herokuapp.com/post/{{_id}}" target="_blank"><img class="shareFB-img" src="/images/shareFB.png" alt=""></a>
+</div>
 </article>
 
 
   {{#if ownProfile}}
 
-  <div class="btn-edit-delete">
+  <div class="btn-edit-delete single-post-btn-respon">
     <form action="/post/{{postInfo._id}}/delete" method="POST">
     <button class="btn btn-primary mb-2">Delete</button>
   </form>
@@ -22,7 +24,7 @@
   
   {{/if}}
 
-<footer class="d-flex justify-content-center align-items-md-center flex-column">  
+<footer class="d-flex justify-content-center single-post-footer-respon align-items-md-center flex-column">  
   {{#if user}}
   <h4 class="add-a-comment">Add a comment</h4>
   {{>commentform}}

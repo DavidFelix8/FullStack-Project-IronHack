@@ -176,6 +176,15 @@ a {
 }
 
 @media only screen and (max-width: 992px) {
+  .postTitle-heading {
+    font-size: 1.2rem;
+  }
+
+  .shareFB-img {
+    width: 5rem;
+    height: 2rem;
+  }
+
   .post {
     margin-top: -5rem;
   }
@@ -270,6 +279,12 @@ a {
 
   #myULToggler {
     display: none;
+  }
+
+  //ShareFb img
+  .shareFB-img {
+    width: 8rem;
+    height: 2rem;
   }
 
   //Button Images Index.hbs
@@ -399,11 +414,6 @@ a {
   text-transform: uppercase;
   border-bottom: 2px solid rgb(136, 136, 136);
 }
-//ShareFb img
-.shareFB-img {
-  width: 8rem;
-  height: 2rem;
-}
 
 .create-post-view {
   display: flex;
@@ -433,7 +443,7 @@ a {
   display: flex;
   justify-content: center;
   color: darkgray;
-  width: 670px;
+  width: 50%;
   border: 5px solid black;
   padding: 50px;
   margin: 20px;
@@ -441,4 +451,24 @@ a {
 
 .author-title-name {
   margin-left: 5rem;
+}
+
+@media (max-width: 750px) {
+  .single-post-btn-respon {
+    margin: 20px 0;
+  }
+  .single-post-footer-respon {
+    margin: 0 25px;
+  }
+  .single-post-responsive {
+    text-align: center;
+    img {
+      display: block;
+      margin: auto;
+    }
+    .post-underpic {
+      max-width: none;
+      min-width: 50%;
+    }
+  }
 }

@@ -1,10 +1,10 @@
 <div class="profile4eachauthor">
     <article class ="own-profile">
 <h1 class="author-title-name">{{author.name}}'s Profile</h1>
-<picture class="profile-image">
-    <img class="ml-5 w-25 h-25" src={{author.photo}} alt="No-pic">
-</picture>
+<div class="d-flex justify-content-between">
+    <img class="ml-5 w-25 h-25 profile-image" src={{author.photo}} alt="No-pic">
 <h5 class="description"> <i>"{{author.description}}"</h5>
+</div>
 </div>
 
 {{#if isOwnProfile}}
@@ -14,8 +14,6 @@
 </div>
 {{/if}}
 </article>
-<h1 class="author-title-name">{{author.name}}'s Profile</h1>
- <h5 class="description"> {{author.description}}</h5>
 
 <section class="author-div-posts">
  <h1 class="category-h2">{{author.name}}'s Posts:</h1>
