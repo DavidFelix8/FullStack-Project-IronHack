@@ -95,6 +95,23 @@ router.post('/:postId/like', (req, res, next) => {
     });
 });
 
+router.post('/:postId/listlike', (req, res, next) => {
+  console.log('i am here', req.user._id, req.params.postId);
+  const postId = req.params.postId;
+  const user = req.user._id;
+  Like.create({
+    postId,
+    userId: user
+  })
+    .then(data => {
+      console.log(data);
+      res.redirect(`/`);
+    })
+    .catch(error => {
+      next(error);
+    });
+});
+
 router.get('/:postId/edit', (req, res, next) => {
   const { postId } = req.params;
   Post.findById(postId)

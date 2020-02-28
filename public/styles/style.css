@@ -1,14 +1,14 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  background-color: rgba(230, 226, 235, 0.5);
   font-family: 'Open Sans'; }
 
 button:focus {
   outline: 0; }
-
-body {
-  background-color: rgba(230, 226, 235, 0.5); }
 
 nav {
   text-decoration: none; }
@@ -22,11 +22,13 @@ nav a {
   text-decoration: none; }
 
 a {
-  color: black; }
+  color: black;
+  text-decoration: none; }
 
 .fourLolz-logo {
-  width: 30%;
-  height: 30%; }
+  width: 6rem;
+  height: 3rem;
+  margin-left: 2.5rem; }
 
 #post-author-share-fb {
   display: inline-flex;
@@ -70,6 +72,8 @@ a {
   width: 90%;
   margin: 4rem auto; }
 
+/* .author-posts {
+} */
 .post-title {
   margin-top: 1em;
   margin-bottom: 1em; }
@@ -101,6 +105,26 @@ a {
   width: 1.5rem;
   height: 1.3rem; }
 
+.button-lang-img-react {
+  float: left;
+  width: 1.8rem;
+  height: 1.5em; }
+
+.button-lang-img-python {
+  float: left;
+  width: 1.8rem;
+  height: 1.5em; }
+
+.button-lang-img-cplusplus {
+  float: left;
+  width: 1.8rem;
+  height: 1.5em; }
+
+.button-lang-img-general {
+  float: left;
+  width: 2rem;
+  height: 1.5em; }
+
 #myInput {
   margin-left: 4rem; }
 
@@ -119,9 +143,11 @@ a {
 
 @media only screen and (max-width: 992px) {
   .post {
-    margin-top: -5rem; }
-  .postfa {
-    margin-top: 8rem; } }
+    margin-top: -5rem; } }
+
+.postfa {
+  margin-top: 8rem;
+  text-decoration: none; }
 
 @media only screen and (min-width: 992px) {
   .navbar {
@@ -142,6 +168,16 @@ a {
   #myULToggler {
     visibility: hidden; } }
 
+.button-like {
+  border: none; }
+
+.button-like img {
+  width: 1.5rem;
+  height: 1.5rem; }
+
+.font-likes {
+  font-size: 1.5rem; }
+
 .buttontop {
   position: fixed;
   border: none;
@@ -152,11 +188,6 @@ a {
   right: 3%;
   z-index: 2; }
 
-/* .share-fb {
-  background-image: url('/images/share-fb.jpg');
-  background-position: center;
-  background-size: cover;
-} */
 .post a {
   text-decoration: none; }
 
@@ -167,6 +198,29 @@ a {
 .horizontalLineBetweenPosts {
   display: flex;
   align-items: center;
-  width: 60%; }
+  width: 60%;
+  margin: 0 auto; }
+
+.feed-1stpage a {
+  text-decoration: none; }
+
+.navbar a {
+  text-decoration: none; }
+
+.btn-edit-delete {
+  display: flex;
+  margin-top: 1em;
+  justify-content: space-evenly;
+  margin-left: 5rem; }
+
+.fb-share-button {
+  margin-left: 5rem; }
+
+.btn-edit-post a {
+  text-decoration: none; }
+
+.shareFB-img {
+  width: 8rem;
+  height: 2rem; }
 
 /*# sourceMappingURL=style.css.map */

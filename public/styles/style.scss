@@ -2,15 +2,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(230, 226, 235, 0.5);
   font-family: 'Open Sans';
 }
 
 button:focus {
   outline: 0;
-}
-
-body {
-  background-color: rgba(230, 226, 235, 0.5);
 }
 
 nav {
@@ -29,12 +29,14 @@ nav a {
 
 a {
   color: black;
+  text-decoration: none;
 }
 
 //4lolz img
 .fourLolz-logo {
-  width: 30%;
-  height: 30%;
+  width: 6rem;
+  height: 3rem;
+  margin-left: 2.5rem;
 }
 
 //
@@ -93,8 +95,8 @@ a {
   margin: 4rem auto;
 }
 
-.author-posts {
-}
+/* .author-posts {
+} */
 
 .post-title {
   margin-top: 1em;
@@ -134,6 +136,30 @@ a {
   height: 1.3rem;
 }
 
+.button-lang-img-react {
+  float: left;
+  width: 1.8rem;
+  height: 1.5em;
+}
+
+.button-lang-img-python {
+  float: left;
+  width: 1.8rem;
+  height: 1.5em;
+}
+
+.button-lang-img-cplusplus {
+  float: left;
+  width: 1.8rem;
+  height: 1.5em;
+}
+
+.button-lang-img-general {
+  float: left;
+  width: 2rem;
+  height: 1.5em;
+}
+
 //Search List Index.hbs
 #myInput {
   margin-left: 4rem;
@@ -159,9 +185,10 @@ a {
   .post {
     margin-top: -5rem;
   }
-  .postfa {
-    margin-top: 8rem;
-  }
+}
+.postfa {
+  margin-top: 8rem;
+  text-decoration: none;
 }
 
 @media only screen and (min-width: 992px) {
@@ -193,6 +220,19 @@ a {
   }
 }
 
+.button-like {
+  border: none;
+}
+
+.button-like img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.font-likes {
+  font-size: 1.5rem;
+}
+
 .buttontop {
   position: fixed;
   border: none;
@@ -203,13 +243,6 @@ a {
   right: 3%;
   z-index: 2;
 }
-
-//Facebook Share
-/* .share-fb {
-  background-image: url('/images/share-fb.jpg');
-  background-position: center;
-  background-size: cover;
-} */
 
 .post a {
   text-decoration: none;
@@ -224,4 +257,34 @@ a {
   display: flex;
   align-items: center;
   width: 60%;
+  margin: 0 auto;
+}
+
+.feed-1stpage a {
+  text-decoration: none;
+}
+
+.navbar a {
+  text-decoration: none;
+}
+
+.btn-edit-delete {
+  display: flex;
+  margin-top: 1em;
+  justify-content: space-evenly;
+  margin-left: 5rem;
+}
+
+.fb-share-button {
+  margin-left: 5rem;
+}
+
+.btn-edit-post a {
+  text-decoration: none;
+}
+
+//ShareFb img
+.shareFB-img {
+  width: 8rem;
+  height: 2rem;
 }

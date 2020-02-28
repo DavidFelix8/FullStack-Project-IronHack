@@ -8,15 +8,21 @@
 </div>
  --}}
 
-<div style="text-align: center; margin: 50px 0">
+<div class="feed-1stpage" style="text-align: center; margin: 50px 0">
   <a class="mt-5 postfa" href="/post/{{_id}}"><h1 class="postTitle-heading">{{title}}</h1></a>
   <div>
   <img class="w-50 h-50" src="{{photo}}" alt="">
   <div class="d-flex" style="max-width: 50%;
     margin: 20px auto;
     justify-content: space-between;">
-    <a href="/profile/{{author.id}}"><h5>{{author.name}}</h5></a>
-    <div class="fb-share-button ml-4" data-href="https://www.facebook.com/sharer/sharer.php?u={{photo}}" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+    <a href="/profile/{{author._id}}"><h5>{{author.name}}</h5></a>
+    <form action="/post/{{_id}}/listlike" method="POST">
+    <button class="button-like"><img src="/images/blueLike.png" alt=""> {{numLikes}}</button>
+  </form>
+
+<a href="https://www.facebook.com/sharer/sharer.php?u=fullstack-froject2-ironhack.herokuapp.com/post/{{_id}}" target="_blank"><img class="shareFB-img" src="/images/shareFB.png" alt=""></a>
+    {{!-- <div class="fb-share-button ml-4" data-href="https://www.facebook.com/sharer/sharer.php?u=google.com" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Partilhar</a></div> --}}
   </div>
+    <hr class="horizontalLineBetweenPosts d-flex justify-content-center align-items-md-center flex-column">
   </div>
 </div>
