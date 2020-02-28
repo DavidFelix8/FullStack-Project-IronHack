@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: rgba(230, 226, 235, 0.5);
+  background-color: white;
   font-family: 14px -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, Helvetica,
     Geneva, sans-serif;
 }
@@ -348,4 +348,19 @@ a {
 .shareFB-img {
   width: 8rem;
   height: 2rem;
+}
+
+// description
+.description {
+  display: flex;
+  justify-content: center;
+  color: darkgray;
+  width: 670px;
+  border: 5px solid black;
+  padding: 50px;
+  margin: 20px;
+}
+
+.author-title-name {
+  margin-left: 5rem;
 }
