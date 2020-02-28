@@ -1,6 +1,6 @@
 <article id="single-post" class="single-post d-flex justify-content-center align-items-md-center flex-column">
   <h1 class ="post-title">{{ postInfo.title }}</h1>
-  <img class="w-75 h-75" src="{{postInfo.photo}}" alt="Image-Post">
+  <img id="image-single-post" class="w-75 h-75" src="{{postInfo.photo}}" alt="Image-Post">
   <h3 class="w-75 m-auto">{{postInfo.author.name}}</h3>
   <h5 class="w-75 m-auto">Category: {{postInfo.category}}</h5>
    <form action="/post/{{postInfo._id}}/like" method="POST">
@@ -14,10 +14,10 @@
   <div class="fb-share-button" data-href="https://www.facebook.com/sharer/sharer.php?{{postInfo._id}}" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Partilhar</a></div>
   <div class="btn-edit-delete">
     <form action="/post/{{postInfo._id}}/delete" method="POST">
-    <button class="">Delete</button>
+    <button class="btn btn-primary mb-2">Delete</button>
   </form>
   
-    <button class="btn-edit-post"><a href = "/post/{{postInfo._id}}/edit">Edit Post</a></button>
+    <button id="edit-post-btn" class="btn btn-primary mb-2"><a href = "/post/{{postInfo._id}}/edit">Edit Post</a></button>
     </div>
   
   {{/if}}
