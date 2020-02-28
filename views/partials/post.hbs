@@ -3,9 +3,7 @@
   <a class="mt-5 postfa" href="/post/{{_id}}"><h1 class="postTitle-heading">{{title}}</h1></a>
   <div>
   <img class="w-50 h-50" src="{{photo}}" alt="">
-  <div class="d-flex" style="max-width: 50%;
-    margin: 20px auto;
-    justify-content: space-between;">
+  <div class="sofia2">
     <a href="/profile/{{author._id}}"><h5>{{author.name}}</h5></a>
     <form action="/post/{{_id}}/listlike" method="POST">
     <button class="button-like"><img src="/images/blueLike.png" alt=""> {{numLikes}}</button>

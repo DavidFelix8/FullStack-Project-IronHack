@@ -2,7 +2,7 @@
   <h1 class ="post-title">{{ postInfo.title }}</h1>
   <img id="image-single-post" class="w-75 h-75" src="{{postInfo.photo}}" alt="Image-Post">
   <h3 class="w-75 m-auto">{{postInfo.author.name}}</h3>
-  <h5 class="w-75 m-auto">Category: {{postInfo.category}}</h5>
+  <h5 class="w-75 m-auto"><small>{{postInfo.category}}</small></h5>
   <form action="/post/{{postInfo._id}}/like" method="POST">
     <button class="button-like"><img src="/images/blueLike.png" alt=""> {{numLikes}}</button>
   </form>

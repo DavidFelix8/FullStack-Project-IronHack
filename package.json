@@ -11,6 +11,7 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cloudinary": "^1.19.0",
+    "connect-flash": "^0.1.1",
     "connect-mongo": "^3.2.0",
     "cookie-parser": "^1.4.4",
     "data-helper": "0.0.1",
@@ -35,6 +36,7 @@
     "passport-google-oauth": "^2.0.0",
     "passport-google-oauth20": "^2.0.0",
     "passport-local": "^1.0.0",
+    "popups": "^1.1.3",
     "serve-favicon": "^2.5.0",
     "time-stamp": "^2.2.0"
   },

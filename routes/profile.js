@@ -19,9 +19,10 @@ router.get('/:userId/edit', routeGuard(true), (req, res, next) => {
 
 router.post('/:userId/edit', routeGuard(true), uploader.single('photo'), (req, res, next) => {
   const userId = req.params.userId;
-  const url = req.file.url;
+  const url = req.file ? req.file.url : req.user.photo;
 
   const { name, email, description } = req.body;
+  console.log(description);
 
   User.findByIdAndUpdate(userId, {
     name,
