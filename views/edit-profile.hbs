@@ -8,10 +8,10 @@
         </div>
         <div class="form-group">
             <label for="inputEmail">Email</label>
-            <h2 id="h2-email-edit">{{user.email}}</h2>
+            <textarea name="email" id="inputEmail" >{{user.email}}</textarea>
         </div>   
         <div>
-             <textarea name="description" id="input-description" placeholder="Describe yourself" maxlength="200"></textarea>
+             <textarea name="description" id="input-description" placeholder="Describe yourself" maxlength="200">{{user.description}}</textarea>
         </div>    
         <button type="submit" class="btn btn-primary">Save Changes</button>
     </form>     

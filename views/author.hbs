@@ -7,6 +7,10 @@
 <picture class="profile-image">
     <img class="ml-5 w-25 h-25" src={{author.photo}} alt="No-pic">
 </picture>
+<div>
+  <h5>Your description goes here: {{author.description}}</h5>
+  
+</div> 
 <div class="author-profile">
     <button type="submit" class="btn btn-primary"><a href="/profile/{{author._id}}/edit">Edit</a></button>     
 </div>
@@ -25,5 +29,6 @@
     {{>post}}
 
     {{/each}}
+    <h5>Description of the auhtor goes here: {{author.description}} </h5>
   </div>
 </section>
