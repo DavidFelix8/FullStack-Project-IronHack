@@ -22,6 +22,11 @@ const schema = new mongoose.Schema({
     maxlength: 500,
     trim: true
   },
+  description: {
+    type: String,
+    maxlength: 200,
+    trim: true
+  },
   photo: {
     type: String,
     default: '/images/no-pic.png'

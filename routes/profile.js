@@ -21,11 +21,12 @@ router.post('/:userId/edit', routeGuard(true), uploader.single('photo'), (req, r
   const userId = req.params.userId;
   const url = req.file.url;
 
-  const { name, email } = req.body;
+  const { name, email, description } = req.body;
 
   User.findByIdAndUpdate(userId, {
     name,
     email,
+    description,
     photo: url
   })
     .then(data => {
