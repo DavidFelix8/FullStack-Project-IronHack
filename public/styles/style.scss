@@ -148,6 +148,13 @@ a {
   display: flex;
 }
 
+.post-underpic-single {
+  max-width: 50%;
+  margin: 20px auto;
+  justify-content: space-between;
+  display: flex;
+}
+
 .post-title {
   margin-top: 1em;
   margin-bottom: 1em;
@@ -372,7 +379,6 @@ a {
 }
 
 #single-post img {
-  display: flex;
   align-items: center;
 }
 
@@ -468,6 +474,12 @@ a {
   .single-post-btn-respon {
     margin: 20px 0;
   }
+  .single-post-title {
+    font-size: 1.5rem;
+  }
+  .single-post-author-name {
+    font-size: 1rem;
+  }
   .single-post-footer-respon {
     margin: 0 25px;
   }
@@ -481,5 +493,12 @@ a {
       max-width: none;
       min-width: 50%;
     }
+  }
+}
+
+@media (max-width: 450px) {
+  .shareFB-img {
+    width: 3rem;
+    height: 1rem;
   }
 }
