@@ -17,7 +17,7 @@
     "data-helper": "0.0.1",
     "debug": "^4.1.1",
     "dotenv": "^8.1.0",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-handlebars": "^3.1.0",
     "express-session": "^1.17.0",
     "hbs": "^4.0.4",
